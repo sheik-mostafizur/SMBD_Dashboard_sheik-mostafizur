@@ -986,7 +986,8 @@
         </div>
 
         <main id="mainContent" class="flex-1 overflow-x-hidden overflow-y-auto bg-[#f8f9fd]">
-            <div class="fixed inset-0 z-50 flex flex-col items-center justify-end overflow-y-auto bg-black bg-opacity-80 sm:justify-start"
+            <div x-cloak
+                class="fixed inset-0 z-50 flex flex-col items-center justify-end overflow-y-auto bg-black bg-opacity-80 sm:justify-start"
                 x-data="{modal:false}" x-show="modal"
                 x-on:modal-overlay.window="if ($event.detail.id == 'applyListModal') modal=true"
                 x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0"
