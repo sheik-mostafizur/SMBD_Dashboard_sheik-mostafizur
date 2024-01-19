@@ -26,7 +26,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css?v723873834736" />
-
+    <!-- TailwindCSS cdn for play -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -1570,35 +1582,52 @@
                                                                                         সাবরেজিস্ট্রার অফিস
                                                                                         :রুপগঞ্জ</span>
                                                                                 </td>
-                                                                                <td>
-                                                                                    <button
-                                                                                        class="h-[30px] flex items-center justify-center flex-nowrap py-[10px] px-4 text-[12px] leading-[16px] border border-[#0DB14B] text-[#0DB14B] bg-[#E7F7ED] hover:bg-opacity-90 rounded-[5px] gap-[5px] ml-auto mr-auto">
-                                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                            width="10" height="10"
-                                                                                            viewBox="0 0 10 10"
-                                                                                            fill="none">
-                                                                                            <mask id="mask0_4953_39600"
-                                                                                                style="mask-type:alpha"
-                                                                                                maskUnits="userSpaceOnUse"
-                                                                                                x="0" y="0" width="10"
-                                                                                                height="10">
-                                                                                                <path
-                                                                                                    fill-rule="evenodd"
-                                                                                                    clip-rule="evenodd"
-                                                                                                    d="M0.916016 0.875H9.85306V9.81204H0.916016V0.875Z"
-                                                                                                    fill="white" />
-                                                                                            </mask>
-                                                                                            <g
-                                                                                                mask="url(#mask0_4953_39600)">
-                                                                                                <path
-                                                                                                    fill-rule="evenodd"
-                                                                                                    clip-rule="evenodd"
-                                                                                                    d="M4.95162 6.29137L6.62774 9.01066C6.70107 9.12983 6.81566 9.12845 6.86195 9.12203C6.90824 9.11562 7.01962 9.0872 7.05995 8.95199L9.15591 1.87303C9.19257 1.74791 9.1252 1.66266 9.09495 1.63241C9.06562 1.60216 8.98174 1.53753 8.86028 1.57191L1.77628 3.64633C1.64199 3.68574 1.61266 3.79849 1.60624 3.84478C1.59982 3.89199 1.59799 4.00887 1.7167 4.08358L4.46716 5.8037L6.89724 3.34795C7.03062 3.2132 7.24832 3.21183 7.38353 3.3452C7.51874 3.47858 7.51966 3.69674 7.38628 3.83149L4.95162 6.29137ZM6.8262 9.81228C6.5072 9.81228 6.21478 9.65003 6.04245 9.37137L4.26549 6.48799L1.35232 4.66612C1.03837 4.46949 0.874282 4.11933 0.925157 3.75128C0.975574 3.38324 1.22812 3.09083 1.58287 2.98678L8.66687 0.912367C8.99274 0.817033 9.34199 0.907325 9.58216 1.14658C9.82232 1.38812 9.9117 1.74103 9.81453 2.06828L7.71857 9.14678C7.61362 9.50291 7.32028 9.75453 6.95316 9.80358C6.91007 9.80908 6.86837 9.81228 6.8262 9.81228V9.81228Z"
-                                                                                                    fill="#0DB14B" />
-                                                                                            </g>
-                                                                                        </svg>
+                                                                                <td class="relative"
+                                                                                    x-data="{ open: false, toggle() { this.open = ! this.open } }">
+                                                                                    <button @click="toggle()"
+                                                                                        @keydown.escape="open = false"
+                                                                                        class="h-[30px] flex items-center justify-center flex-nowrap py-[10px] px-4 text-[12px] leading-[16px] border border-[#0DB14B] text-white bg-[#0DB14B] hover:bg-opacity-90 rounded-[5px] gap-[5px] ml-auto mr-auto">
                                                                                         যাচাই
+                                                                                        <svg width="12" height="12"
+                                                                                            viewBox="0 0 12 12"
+                                                                                            fill="none"
+                                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                                            <g
+                                                                                                clip-path="url(#clip0_10180_38469)">
+                                                                                                <path
+                                                                                                    d="M11.2085 3.21729L6.68067 7.74516C6.59352 7.8288 6.47741 7.87551 6.35663 7.87551C6.23584 7.87551 6.11973 7.8288 6.03258 7.74516L1.50746 3.21958L0.859375 3.86766L5.3845 8.39324C5.6466 8.64304 5.99478 8.78239 6.35685 8.78239C6.71893 8.78239 7.06711 8.64304 7.32921 8.39324L11.8566 3.86537L11.2085 3.21729Z"
+                                                                                                    fill="white"></path>
+                                                                                            </g>
+                                                                                            <defs>
+                                                                                                <clipPath
+                                                                                                    id="clip0_10180_38469">
+                                                                                                    <rect width="11"
+                                                                                                        height="11"
+                                                                                                        fill="white"
+                                                                                                        transform="translate(0.857422 0.5)">
+                                                                                                    </rect>
+                                                                                                </clipPath>
+                                                                                            </defs>
+                                                                                        </svg>
                                                                                     </button>
+                                                                                    <div x-cloak x-show="open"
+                                                                                        @click.away="open = false"
+                                                                                        class="z-10 absolute bottom-0 right-full bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                                                                                        style="display: none;">
+                                                                                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                                                                            aria-labelledby="dropdownDefaultButton">
+                                                                                            <li>
+                                                                                                <a href="./v2-namjari-application-dag-bhittik.html"
+                                                                                                    class="block px-4 py-2 hover:bg-[#E7F7ED] dark:hover:bg-gray-600 dark:hover:text-white">দাগ
+                                                                                                    ভিত্তিক যাচাই</a>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="./v2-namjari-application-khotian-bhittik.html"
+                                                                                                    class="block px-4 py-2 hover:bg-[#E7F7ED] dark:hover:bg-gray-600 dark:hover:text-white">খতিয়ান
+                                                                                                    ভিত্তিক যাচাই</a>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
                                                                                 </td>
                                                                             </tr>
                                                                         </tbody>
