@@ -4493,6 +4493,12 @@ input[type="search"]::-webkit-search-cancel-button {
   font-size: 10px;
 }
 
+.smt-applist-table-border-y table th,
+.smt-applist-table-border-y table td {
+  border-left: 0;
+  border-right: 0;
+}
+
 @media (min-width: 1536px) {
   .smt-applist-table table th,
   .smt-applist-table table td {
