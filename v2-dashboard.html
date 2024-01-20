@@ -986,6 +986,8 @@
         </div>
 
         <main id="mainContent" class="flex-1 overflow-x-hidden overflow-y-auto bg-[#f8f9fd]">
+            <!-- When you need same modal just use this button attributes: 
+            x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});" -->
             <div x-cloak
                 class="fixed inset-0 z-50 flex flex-col items-center justify-end overflow-y-auto bg-black bg-opacity-80 sm:justify-start"
                 x-data="{modal:false}" x-show="modal"
@@ -1696,7 +1698,7 @@
                                 <div class="text-[12px] 2xl:text-[13px] text-[#4F4F4F]">ঢাকা বিভাগ</div>
                             </div>
                         </div>
-                        <div
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                             class="flex items-center p-4 shadow-sm rounded-[8px] 2xl:rounded-[10px] bg-white hover:-translate-y-2 smt-transition">
                             <div
                                 class="rounded-[12px] w-[40px] lg:w-[50px] 2xl:w-[60px] h-[40px] lg:h-[50px] 2xl:h-[60px]">
@@ -1710,7 +1712,7 @@
                                 <div class="text-[12px] 2xl:text-[13px] text-[#4F4F4F]">ঢাকা জেলা</div>
                             </div>
                         </div>
-                        <div
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                             class="flex items-center p-4 shadow-sm rounded-[8px] 2xl:rounded-[10px] bg-white hover:-translate-y-2 smt-transition">
                             <div
                                 class="rounded-[12px] w-[40px] lg:w-[50px] 2xl:w-[60px] h-[40px] lg:h-[50px] 2xl:h-[60px]">
@@ -1725,7 +1727,7 @@
                                     রাজস্ব সার্কেল</div>
                             </div>
                         </div>
-                        <div
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                             class="flex items-center p-4 shadow-sm rounded-[8px] 2xl:rounded-[10px] bg-white hover:-translate-y-2 smt-transition">
                             <div
                                 class="rounded-[12px] w-[40px] lg:w-[50px] 2xl:w-[60px] h-[40px] lg:h-[50px] 2xl:h-[60px]">
@@ -1842,7 +1844,7 @@
                     <h3 class="mb-4 text-[#2A2121] text-[15px] lg:text-[16px] 2xl:text-[18px]">পদক্ষেপ নিতে হবে এমন
                         মামলাসমূহ</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-5">
-                        <div
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                             class="flex items-center text-center flex-col justify-items-start h-full border border-[#7BB0FF] p-6 md:p-5 sm:p-4 shadow-sm rounded-md hover:-translate-y-2 smt-transition">
                             <div class="mx-5">
                                 <h4 class="text-[20px] 2xl:text-[22px] font-bold text-[#7BB0FF] mb-1">৮৩৪</h4>
@@ -1850,7 +1852,7 @@
                             </div>
                         </div>
 
-                        <div
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                             class="flex items-center text-center flex-col justify-items-start h-full border border-rose-400 p-6 md:p-5 sm:p-4 shadow-sm rounded-md hover:-translate-y-2 smt-transition">
                             <div class="mx-5">
                                 <h4 class="text-[20px] 2xl:text-[22px] font-bold text-rose-400 mb-1">৫০
@@ -1859,7 +1861,7 @@
                             </div>
                         </div>
 
-                        <div
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                             class="flex items-center text-center flex-col justify-items-start h-full border border-purple-500 p-6 md:p-5 sm:p-4 shadow-sm rounded-md hover:-translate-y-2 smt-transition">
                             <div class="mx-5">
                                 <h4 class="text-[20px] 2xl:text-[22px] font-bold text-purple-400 mb-1">৫০
@@ -1869,7 +1871,7 @@
                             </div>
                         </div>
 
-                        <div
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                             class="flex items-center text-center flex-col justify-items-start h-full border border-fuchsia-500 p-6 md:p-5 sm:p-4 shadow-sm rounded-md hover:-translate-y-2 smt-transition">
                             <div class="mx-5">
                                 <h4 class="text-[20px] 2xl:text-[22px] font-bold text-fuchsia-400 mb-1">
@@ -1884,8 +1886,8 @@
                 <div class="dash-sec-block relative rounded-[8px] 2xl:rounded-[10px] w-full p-5 bg-[#e8e2fd] mb-6">
                     <h3 class="mb-4 text-[#2A2121] text-[15px] lg:text-[16px] 2xl:text-[18px]">সম্পূরক আবেদন</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-5">
-                        <div
-                            class="flex group items-center text-center flex-col justify-items-start h-full bg-[#FBF7FC] border border-[#E57AFF] p-6 md:p-5 sm:p-4 shadow-sm rounded-md overflow-hidden relative">
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
+                            class="flex group items-center text-center flex-col justify-items-start h-full bg-[#FBF7FC] border border-[#E57AFF] p-6 md:p-5 sm:p-4 shadow-sm rounded-md overflow-hidden relative cursor-pointer">
                             <div class="mx-5">
                                 <h4 class="text-[20px] 2xl:text-[22px] font-bold mb-1">১৯</h4>
                                 <div class="text-[12px] 2xl:text-[13px] text-[#4F4F4F]">খতিয়ান সংশোধনের অনুরোধ</div>
@@ -1894,8 +1896,8 @@
                                 class="h-32 w-32 smt-transition group-hover:-left-8 group-hover:-bottom-8 rounded-full block absolute -left-14 -bottom-14 bg-[#E57AFF] bg-opacity-10"></span>
                         </div>
 
-                        <div
-                            class="flex group items-center text-center flex-col justify-items-start h-full bg-[#FBF8FD] border border-[#CB7EFF] p-6 md:p-5 sm:p-4 shadow-sm rounded-md overflow-hidden relative">
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
+                            class="flex group items-center text-center flex-col justify-items-start h-full bg-[#FBF8FD] border border-[#CB7EFF] p-6 md:p-5 sm:p-4 shadow-sm rounded-md overflow-hidden relative cursor-pointer">
                             <div class="mx-5">
                                 <h4 class="text-[20px] 2xl:text-[22px] font-bold mb-1">৩০</h4>
                                 <div class="text-[12px] 2xl:text-[13px] text-[#4F4F4F]">পুনঃ শুনানীর জন্য অনুরোধ</div>
@@ -1904,8 +1906,8 @@
                                 class="h-32 w-32 smt-transition group-hover:-left-8 group-hover:-bottom-8 rounded-full block absolute -left-14 -bottom-14 bg-[#CB7EFF] bg-opacity-10"></span>
                         </div>
 
-                        <div
-                            class="flex group items-center text-center flex-col justify-items-start h-full bg-[#F8FCF9] border border-[#A2E09D] p-6 md:p-5 sm:p-4 shadow-sm rounded-md overflow-hidden relative">
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
+                            class="flex group items-center text-center flex-col justify-items-start h-full bg-[#F8FCF9] border border-[#A2E09D] p-6 md:p-5 sm:p-4 shadow-sm rounded-md overflow-hidden relative cursor-pointer">
                             <div class="mx-5">
                                 <h4 class="text-[20px] 2xl:text-[22px] font-bold mb-1">০১</h4>
                                 <div class="text-[12px] 2xl:text-[13px] text-[#4F4F4F]">শুনানীর তারিখ পরিবর্তন<br>
@@ -1915,8 +1917,8 @@
                                 class="h-32 w-32 smt-transition group-hover:-left-8 group-hover:-bottom-8 rounded-full block absolute -left-14 -bottom-14 bg-[#A2E09D] bg-opacity-10"></span>
                         </div>
 
-                        <div
-                            class="flex group items-center text-center flex-col justify-items-start h-full bg-[#F7FCFC] border border-[#7BE7FF] p-6 md:p-5 sm:p-4 shadow-sm rounded-md overflow-hidden relative">
+                        <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
+                            class="flex group items-center text-center flex-col justify-items-start h-full bg-[#F7FCFC] border border-[#7BE7FF] p-6 md:p-5 sm:p-4 shadow-sm rounded-md overflow-hidden relative cursor-pointer">
                             <div class="mx-5">
                                 <h4 class="text-[20px] 2xl:text-[22px] font-bold mb-1">১৬</h4>
                                 <div class="text-[12px] 2xl:text-[13px] text-[#4F4F4F]">BIDA (OSS) থেকে আগত<br>
@@ -1934,7 +1936,7 @@
                         <h3 class="mb-4 text-[#2A2121] text-[16px] xl:text-[18px] 2xl:text-[20px]">কানুনগো / সার্ভেয়ার
                             প্রতিবেদন</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
-                            <div
+                            <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                                 class="flex items-center text-center flex-col justify-items-start h-full border border-rose-400 p-6 md:p-5 sm:p-4 shadow-sm rounded-md hover:-translate-y-2 smt-transition">
                                 <div class="mx-1">
                                     <h4 class="text-[20px] 2xl:text-[22px] font-bold text-rose-400 mb-1">৫৭</h4>
@@ -1942,7 +1944,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div
+                            <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                                 class="flex items-center text-center flex-col justify-items-start h-full border border-[#A2E09D] p-6 md:p-5 sm:p-4 shadow-sm rounded-md hover:-translate-y-2 smt-transition">
                                 <div class="mx-1">
                                     <h4 class="text-[20px] 2xl:text-[22px] font-bold text-[#A2E09D] mb-1">৫৬</h4>
@@ -1958,7 +1960,7 @@
                         <h3 class="mb-4 text-[#2A2121] text-[15px] lg:text-[16px] 2xl:text-[18px]">ইউনিয়ন/পৌর ভূমি অফিস
                             পর্যায়ের মতামত</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-                            <div
+                            <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                                 class="flex items-center text-center flex-col justify-items-start h-full border border-rose-400 p-6 md:p-5 sm:p-4 shadow-sm rounded-md hover:-translate-y-2 smt-transition">
                                 <div class="mx-1">
                                     <h4 class="text-[20px] 2xl:text-[22px] font-bold text-rose-400 mb-1">৩৪</h4>
@@ -1966,7 +1968,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div
+                            <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                                 class="flex items-center text-center flex-col justify-items-start h-full border border-[#A2E09D] p-6 md:p-5 sm:p-4 shadow-sm rounded-md hover:-translate-y-2 smt-transition">
                                 <div class="mx-1">
                                     <h4 class="text-[20px] 2xl:text-[22px] font-bold text-[#A2E09D] mb-1">২২</h4>
@@ -1976,7 +1978,7 @@
                                         প্রাপ্তি</div>
                                 </div>
                             </div>
-                            <div
+                            <div x-data="{id:'applyListModal'}" x-on:click="$dispatch('modal-overlay',{id});"
                                 class="flex items-center text-center flex-col justify-items-start h-full border border-[#7BE7FF] p-6 md:p-5 sm:p-4 shadow-sm rounded-md hover:-translate-y-2 smt-transition">
                                 <div class="mx-1">
                                     <h4 class="text-[20px] 2xl:text-[22px] font-bold text-[#7BE7FF] mb-1">৪৩</h4>
