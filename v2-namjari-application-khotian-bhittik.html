@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>দাগ ভিত্তিক যাচাই | Namjari Application Details | Smart Mutation BD</title>
+    <title>খতিয়ান ভিত্তিক যাচাই| Namjari Application Details | Smart Mutation BD</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="sdg-development" />
@@ -1012,7 +1012,7 @@
                                     d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
                                     clip-rule="evenodd"></path>
                             </svg></li>
-                        <li class="px-2"><a href="#" class="no-underline text-[13px] text-[#6B788E]">দাগ ভিত্তিক
+                        <li class="px-2"><a href="#" class="no-underline text-[13px] text-[#6B788E]">খতিয়ান ভিত্তিক
                                 যাচাই</a>
                         </li>
                     </ol>
@@ -1068,15 +1068,15 @@
                             <div class="dash-card-body p-[15px]">
 
                                 <div class="mb-6">
-                                    <h1 class="text-2xl text-center">দাগ ভিত্তিক যাচাই</h1>
+                                    <h1 class="text-2xl text-center">খতিয়ান ভিত্তিক যাচাই</h1>
                                     <div
                                         class="text-xl flex flex-wrap items-center justify-center gap-y-4 gap-x-14 mt-5">
                                         <div class="flex flex-wrap items-center gap-5">
-                                            <p>সর্বশেষ জরিপ </p>
+                                            <p>খতিয়ানের ধরন</p>
                                             <div class="bg-[#28A745] py-1 px-14 text-white">{ BS }</div>
                                         </div>
                                         <div class="flex flex-wrap items-center gap-5">
-                                            <p>দাগ নং </p>
+                                            <p>খতিয়ান নম্বর</p>
                                             <div class="bg-[#28A745] py-1 px-14 text-white">{ ৪৫৭ }</div>
                                         </div>
                                     </div>
@@ -1113,10 +1113,22 @@
                                                                 মৌজা</th>
                                                             <th
                                                                 class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                শ্রেণি</th>
+                                                                দাগ নম্বর</th>
                                                             <th
                                                                 class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                জমির পরিমান (একর)</th>
+                                                                দাগে মোট জমি</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                দাগে অত্র খতিয়ানের অংশ</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                অংশ আনুযায়ী দাগে খতিয়ানের জমি</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                রেকডীয় শ্রেণী</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                ব্যবহার ভিত্তিক শ্রেণী</th>
                                                             <th
                                                                 class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
                                                                 ম্যাপ</th>
@@ -1124,22 +1136,160 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr class="bg-[#FCFCFC]">
-                                                            <td>
-                                                                ঢাকা
+                                                            <td>ঢাকা</td>
+                                                            <td>উপজেলা/ সার্কেল</td>
+                                                            <td>পূর্ববাজুনিয়া (089)
                                                             </td>
-                                                            <td>
-                                                                উপজেলা/ সার্কেল
+                                                            <td>৩৫৪৫</td>
+                                                            <td>০.৫০৭৫</td>
+                                                            <td>০.৫০৭৫</td>
+                                                            <td>০.৫০৭৫</td>
+                                                            <td>ধানী</td>
+                                                            <td>বাড়ি</td>
+                                                            <td class="text-center">
+                                                                <button class="h-[34px] btn-green-outline mx-auto">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                        height="12" viewBox="0 0 12 12" fill="none">
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                            d="M3.38793 7.63939C2.68989 7.03941 2.19168 6.35416 1.95747 5.99985C2.19122 5.64555 2.68989 4.9603 3.38793 4.36032C4.10889 3.74108 4.99897 3.24972 5.99997 3.24972C7.00098 3.24972 7.89106 3.74108 8.61202 4.36032C9.31006 4.9603 9.80827 5.64555 10.0425 5.99985C9.80873 6.35416 9.31006 7.03941 8.61202 7.63939C7.89106 8.25863 7.00098 8.74999 5.99997 8.74999C4.99897 8.74999 4.10889 8.25863 3.38793 7.63939ZM5.99997 2.33301C4.69281 2.33301 3.59693 2.97241 2.79072 3.66499C1.98177 4.36032 1.42031 5.1464 1.17097 5.52775C1.07886 5.66797 1.02979 5.83208 1.02979 5.99985C1.02979 6.16763 1.07886 6.33174 1.17097 6.47196C1.42031 6.85331 1.98177 7.63939 2.79072 8.33472C3.59739 9.02729 4.69281 9.6667 5.99997 9.6667C7.30714 9.6667 8.40302 9.02729 9.20923 8.33472C10.0182 7.63939 10.5796 6.85331 10.829 6.47196C11.0174 6.18411 11.0174 5.81605 10.829 5.52775C10.5796 5.1464 10.0182 4.36032 9.20923 3.66499C8.40256 2.97241 7.30714 2.33301 5.99997 2.33301ZM5.08331 5.99985C5.08331 5.75673 5.17988 5.52356 5.35179 5.35164C5.5237 5.17972 5.75686 5.08314 5.99997 5.08314C6.24309 5.08314 6.47625 5.17972 6.64816 5.35164C6.82006 5.52356 6.91664 5.75673 6.91664 5.99985C6.91664 6.24298 6.82006 6.47615 6.64816 6.64807C6.47625 6.81998 6.24309 6.91657 5.99997 6.91657C5.75686 6.91657 5.5237 6.81998 5.35179 6.64807C5.17988 6.47615 5.08331 6.24298 5.08331 5.99985ZM5.99997 4.16643C5.51374 4.16643 5.04743 4.35959 4.70361 4.70343C4.3598 5.04726 4.16664 5.5136 4.16664 5.99985C4.16664 6.48611 4.3598 6.95245 4.70361 7.29628C5.04743 7.64011 5.51374 7.83328 5.99997 7.83328C6.48621 7.83328 6.95252 7.64011 7.29634 7.29628C7.64015 6.95245 7.83331 6.48611 7.83331 5.99985C7.83331 5.5136 7.64015 5.04726 7.29634 4.70343C6.95252 4.35959 6.48621 4.16643 5.99997 4.16643Z"
+                                                                            fill="#0DB14B"></path>
+                                                                    </svg>
+                                                                    দেখুন
+                                                                </button>
                                                             </td>
-                                                            <td>
-                                                                পূর্ববাজুনিয়া (089)
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="mt-4 smt-dash-card w-full bg-white rounded-[6px] overflow-hidden border border-[#C5ECD4]">
+                                            <div
+                                                class="dash-card-head bg-[#C5ECD4] text-[#22304E] px-[15px] py-[10px] flex items-center justify-between flex-wrap gap-[10px]">
+                                                <div class="card-title flex flex-nowrap gap-[10px] items-center">
+                                                    <h3 class="text-[13px] font-bold leading-tight"><span
+                                                            class="w-8 h-8 rounded-full inline-flex bg-[#F5FFF9] items-center justify-center mr-2">১.১</span>হোল্ডিং
+                                                        ও ভূমি উন্নয়ন কর
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="dash-card-body p-[20px]">
+                                                <div class="card-table w-full block relative">
+                                                    <div
+                                                        class="smt-applist-table smt-applist-table-border-y  relative overflow-x-auto">
+                                                        <table
+                                                            class="w-full text-[12px] xl:text-[13px] text-center text-[#545D69]">
+                                                            <thead>
+                                                                <tr
+                                                                    class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
+                                                                    <th
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                        জোত নম্বর</th>
+                                                                    <th
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                        সর্বমোট ভূমি উন্নয়ন কর</th>
+                                                                    <th
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                        সর্বশেষ খাজনা পরিশোধের বছর</th>
+                                                                    <th
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                        বকেয়া বছর</th>
+                                                                    <th
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                        বকেয়া কর</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="bg-[#FCFCFC]">
+                                                                    <td>২৪২৪</td>
+                                                                    <td>২০০</td>
+                                                                    <td>২০১৮</td>
+                                                                    <td>২ বছর</td>
+                                                                    <td>২০০০</td>
+                                                                </tr>
+                                                                <tr class="bg-[#FCFCFC]">
+                                                                    <td>২৪২৪</td>
+                                                                    <td>২০০</td>
+                                                                    <td>২০১৮</td>
+                                                                    <td>২ বছর</td>
+                                                                    <td>২০০০</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- one -->
 
+
+                                <!-- two -->
+                                <div
+                                    class="smt-dash-card w-full bg-white rounded-[6px] overflow-hidden border border-[#C5ECD4] mb-6">
+                                    <div
+                                        class="dash-card-head bg-[#C5ECD4] text-[#22304E] px-[15px] py-[10px] flex items-center justify-between flex-wrap gap-[10px]">
+                                        <div class="card-title flex flex-nowrap gap-[10px] items-center">
+                                            <h3 class="text-[13px] font-bold leading-tight"><span
+                                                    class="w-8 h-8 rounded-full inline-flex bg-[#F5FFF9] items-center justify-center mr-2">২</span>{আগত
+                                                খতিয়ান} আনুযায়ী খতিয়ান
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="dash-card-body p-[20px]">
+                                        <div class="card-table w-full block relative">
+                                            <div
+                                                class="smt-applist-table smt-applist-table-border-y  relative overflow-x-auto">
+                                                <table
+                                                    class="w-full text-[12px] xl:text-[13px] text-center text-[#545D69]">
+                                                    <thead>
+                                                        <tr
+                                                            class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                জেলা</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                উপজেলা/ সার্কেল</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                মৌজা</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                দাগ নম্বর</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                দাগে মোট জমি</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                দাগে অত্র খতিয়ানের অংশ</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                অংশ আনুযায়ী দাগে খতিয়ানের জমি</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                রেকডীয় শ্রেণী</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                ব্যবহার ভিত্তিক শ্রেণী</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                ম্যাপ</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-[#FCFCFC]">
+                                                            <td> ঢাকা </td>
+                                                            <td> উপজেলা/ সার্কেল</td>
+                                                            <td> পূর্ববাজুনিয়া (089)
                                                             </td>
-                                                            <td>
-                                                                ধানী
-                                                            </td>
-                                                            <td>
-                                                                ০.৫০৭৫
-                                                            </td>
+                                                            <td> ৩৫৪৫</td>
+                                                            <td> ০.৫০৭৫</td>
+                                                            <td> ০.৫০৭৫</td>
+                                                            <td> ০.৫০৭৫</td>
+                                                            <td> ধানী</td>
+                                                            <td> বাড়ি</td>
                                                             <td class="text-center">
                                                                 <button class="h-[34px] btn-green-outline mx-auto">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="12"
@@ -1158,76 +1308,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- one -->
-
-
-                                <!-- two -->
-                                <div
-                                    class="smt-dash-card w-full bg-white rounded-[6px] overflow-hidden border border-[#C5ECD4] mb-6">
-                                    <div
-                                        class="dash-card-head bg-[#C5ECD4] text-[#22304E] px-[15px] py-[10px] flex items-center justify-between flex-wrap gap-[10px]">
-                                        <div class="card-title flex flex-nowrap gap-[10px] items-center">
-                                            <h3 class="text-[13px] font-bold leading-tight"><span
-                                                    class="w-8 h-8 rounded-full inline-flex bg-[#F5FFF9] items-center justify-center mr-2">২</span>সর্বশেষে
-                                                জরিপ {BS} আনুযায়ী মালিকানাঃ
-                                            </h3>
-                                        </div>
-                                    </div>
-                                    <div class="dash-card-body p-[20px]">
-                                        <div class="card-table w-full block relative">
-                                            <div
-                                                class="smt-applist-table smt-applist-table-border-y  relative overflow-x-auto">
-                                                <table
-                                                    class="w-full text-[12px] xl:text-[13px] text-center text-[#545D69]">
-                                                    <thead>
-                                                        <tr
-                                                            class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                ক্রমিক</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                খতিয়ান নম্বর</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                মালিক (নাম ও ঠিকানা)</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                দাগে অত্র খতিয়ানের অংশ</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                অংশানুযায়ী দাগে খতিয়ানের জমি (একর)</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="bg-[#FCFCFC]">
-                                                            <td> ১ </td>
-                                                            <td> ৫৬৭</td>
-                                                            <td>মালিক (নাম ও ঠিকানা)</td>
-                                                            <td>
-                                                                ০.৫০৭৫
-                                                            </td>
-                                                            <td>
-                                                                ০.৫০৭৫
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="bg-[#FCFCFC]">
-                                                            <td> ১ </td>
-                                                            <td> ৫৬৭</td>
-                                                            <td>মালিক (নাম ও ঠিকানা)</td>
-                                                            <td>
-                                                                ০.৫০৭৫
-                                                            </td>
-                                                            <td>
-                                                                ০.৫০৭৫
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- two -->
 
                                 <!-- three -->
@@ -1237,8 +1317,8 @@
                                         class="dash-card-head bg-[#C5ECD4] text-[#22304E] px-[15px] py-[10px] flex items-center justify-between flex-wrap gap-[10px]">
                                         <div class="card-title flex flex-nowrap gap-[10px] items-center">
                                             <h3 class="text-[13px] font-bold leading-tight"><span
-                                                    class="w-8 h-8 rounded-full inline-flex bg-[#F5FFF9] items-center justify-center mr-2">৩</span>
-                                                দাগে মালিকানা হস্তান্তরের বিবরনীঃ
+                                                    class="w-8 h-8 rounded-full inline-flex bg-[#F5FFF9] items-center justify-center mr-2">৩</span>{বর্তমান
+                                                খতিয়ান BS } হতে জামি হস্তান্তরের বিবরনী
                                             </h3>
                                         </div>
                                     </div>
@@ -1250,49 +1330,72 @@
                                                     <thead>
                                                         <tr
                                                             class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
-                                                            <th rowspan="2"
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
                                                                 তারিখ</th>
-                                                            <th rowspan="2"
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
                                                                 হস্তান্তরের সূত্র </th>
-                                                            <th rowspan="2"
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
                                                                 দলিল নং</th>
-                                                            <th colspan="3"
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle">
-                                                                দাগে অত্র খতিয়ানের অংশ</th>
-                                                            <th colspan="3"
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle">
-                                                                খতিয়ানের তথ্য</th>
-                                                        </tr>
-                                                        <tr
-                                                            class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
                                                             <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
-                                                                নম্বর</th>
+                                                                মামলা নং</th>
                                                             <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
-                                                                দাগে অংশ </th>
+                                                                আগত খতিয়ান</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                দাগ</th>
                                                             <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
                                                                 জমির পরিমান</th>
                                                             <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
-                                                                দাগে অংশ </th>
+                                                                খতিয়ান নম্বর</th>
                                                             <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
-                                                                দাগে অংশ </th>
+                                                                দাগ নম্বর</th>
                                                             <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
-                                                                জমির পরিমান </th>
+                                                                জমির পরিমান</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr class="bg-[#FCFCFC]">
-                                                            <td>২৯-১২-২০২৩</td>
-                                                            <td>ক্রয়</td>
-                                                            <td>২৭৮৯</td>
-                                                            <td>12(2023-2024)</td>
-                                                            <td>১২৩৪</td>
-                                                            <td>২ একর</td>
-                                                            <td>জমি</td>
-                                                            <td>১২৩৪</td>
-                                                            <td>২ একর</td>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ২৩-১২-১৩</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ক্রয়</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৪৩৫৩</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৩৪৩৪</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৩৪৭৩</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৬৫৭৭</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ০.৪৫৪৫</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৮৪৫৫</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৪৫৩৪</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ০.৪৫৪৫</th>
+                                                        </tr>
+                                                        <tr class="bg-[#FCFCFC]">
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ২৩-১২-১৩</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ক্রয়</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৪৩৫৩</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৩৪৩৪</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৩৪৭৩</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৬৫৭৭</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ০.৪৫৪৫</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৮৪৫৫</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ৪৫৩৪</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ০.৪৫৪৫</th>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -1309,8 +1412,8 @@
                                         class="dash-card-head bg-[#C5ECD4] text-[#22304E] px-[15px] py-[10px] flex items-center justify-between flex-wrap gap-[10px]">
                                         <div class="card-title flex flex-nowrap gap-[10px] items-center">
                                             <h3 class="text-[13px] font-bold leading-tight"><span
-                                                    class="w-8 h-8 rounded-full inline-flex bg-[#F5FFF9] items-center justify-center mr-2">৪</span>দাগে
-                                                হোল্ডিং ও ভূমি উন্নয়ন করঃ
+                                                    class="w-8 h-8 rounded-full inline-flex bg-[#F5FFF9] items-center justify-center mr-2">৪</span>খতিয়ানভূক্ত
+                                                জমির বন্ধক/ মর্টগেজের তথ্য
                                             </h3>
                                         </div>
                                     </div>
@@ -1323,57 +1426,17 @@
                                                     <thead>
                                                         <tr
                                                             class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                হোল্ডিং নম্বর</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                খতিয়ানের ধরন</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                খতিয়ান নম্বর</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                মালিকের নাম</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                জমির পরিমান (একর)</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                সর্বমোট ভূমি উন্নয়ন কর</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                সর্বশেষ খাজনা পরিশোধের সাল</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                বকেয়া বছর</th>
-                                                            <th
-                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
-                                                                বকেয়া কর</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                দাগ নম্বর</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                মর্টগেজ রেফারেন্স নম্বর</th>
+                                                            <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                ব্যাংক ও ব্র্যাঞ্চ</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr class="bg-[#FCFCFC]">
-                                                            <td>৩৪৩৪</td>
-                                                            <td>নামজারি</td>
-                                                            <td>৪৩৫৩</td>
-                                                            <td>মালিকের নাম</td>
-                                                            <td>০.১০০০</td>
-                                                            <td>১০০০</td>
-                                                            <td>২০২০</td>
-                                                            <td>৩ বছর</td>
-                                                            <td>১০০০</td>
-                                                        </tr>
-                                                        <tr class="bg-[#FCFCFC]">
-                                                            <td>৩৪৩৪</td>
-                                                            <td>নামজারি</td>
-                                                            <td>৪৩৫৩</td>
-                                                            <td>মালিকের নাম</td>
-                                                            <td>০.১০০০</td>
-                                                            <td>১০০০</td>
-                                                            <td>২০২০</td>
-                                                            <td>৩ বছর</td>
-                                                            <td>১০০০</td>
+                                                            <td colspan="3">মটগেজ এর কোনো তথ্য পাওয়া যায় নি !!</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -1382,6 +1445,7 @@
                                     </div>
                                 </div>
                                 <!-- four -->
+
                                 <!-- five -->
                                 <div
                                     class="smt-dash-card w-full bg-white rounded-[6px] overflow-hidden border border-[#C5ECD4] mb-6">
@@ -1425,6 +1489,7 @@
                                     </div>
                                 </div>
                                 <!-- five -->
+
                                 <!-- six -->
                                 <div
                                     class="smt-dash-card w-full bg-white rounded-[6px] overflow-hidden border border-[#C5ECD4] mb-6">
@@ -1744,6 +1809,53 @@
                                     </div>
                                 </div>
                                 <!-- eleven -->
+
+                                <!-- twelve -->
+                                <div
+                                    class="smt-dash-card w-full bg-white rounded-[6px] overflow-hidden border border-[#C5ECD4] mb-6">
+                                    <div
+                                        class="dash-card-head bg-[#C5ECD4] text-[#22304E] px-[15px] py-[10px] flex items-center justify-between flex-wrap gap-[10px]">
+                                        <div class="card-title flex flex-nowrap gap-[10px] items-center">
+                                            <h3 class="text-[13px] font-bold leading-tight"><span
+                                                    class="w-8 h-8 rounded-full inline-flex bg-[#F5FFF9] items-center justify-center mr-2">১১</span>খতিয়ানের
+                                                কোনো দাগে সরকারি স্বার্থ
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="dash-card-body p-[20px]">
+                                        <div class="card-table w-full block relative">
+                                            <div
+                                                class="smt-applist-table smt-applist-table-border-y  relative overflow-x-auto">
+                                                <table
+                                                    class="w-full text-[12px] xl:text-[13px] text-center text-[#545D69]">
+                                                    <thead>
+                                                        <tr
+                                                            class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                দাগ নং</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                খতিয়ান</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                মালিকানা</th>
+                                                            <th
+                                                                class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                রেকর্ডের ধরন</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-[#FCFCFC]">
+                                                            <td colspan="4">সরকারি স্বার্থের তথ্য পাওয়া যায় নি !!</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- twelve -->
 
                                 <div><a href="./v2-namjari-application-details.html"
                                         class="h-[36px] w-28 mx-auto flex items-center justify-center flex-nowrap py-[10px] px-[20px] text-[13px] leading-[16px] border border-[#EBECEF] text-[#071638] bg-[#EBECEF] hover:bg-opacity-80 rounded-[5px] gap-[5px]">
