@@ -2514,7 +2514,7 @@
                                                     <!-- modal for bellow buttons -->
                                                     <div class="fixed inset-0 z-50 flex flex-col items-center justify-end overflow-y-auto bg-black bg-opacity-80 sm:justify-start"
                                                         x-data="{modal:false}" x-show="modal"
-                                                        x-on:modal-overlay.window="if ($event.detail.id == 'modalForDakhun') modal=true"
+                                                        x-on:modal-overlay.window="if ($event.detail.id == 'modalForAdeshDakhun') modal=true"
                                                         x-transition:enter="transition ease-out duration-1000"
                                                         x-transition:enter-start="opacity-0"
                                                         x-transition:enter-end="opacity-100"
@@ -2565,7 +2565,7 @@
                                                     <div
                                                         class="tab-head-title flex items-center justify-end gap-5 w-full mb-4">
                                                         <div>
-                                                            <button x-data="{id:'modalForDakhun'}"
+                                                            <button x-data="{id:'modalForAdeshDakhun'}"
                                                                 x-on:click="$dispatch('modal-overlay',{id})"
                                                                 class="h-[36px] flex items-center justify-center flex-nowrap py-[10px] px-[20px] text-[13px] leading-[16px] border border-[#0065FF] text-[#ffffff] bg-[#0065FF] hover:bg-opacity-80 rounded-[5px] gap-[5px]">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="14"
@@ -2665,7 +2665,7 @@
                                                                             শুনানির জন্য পরবর্তী ধার্য তারিখ -
                                                                             ১৩/১২/২০১৯ খ্রি:।</td>
                                                                         <td>
-                                                                            <button x-data="{id:'modalForDakhun'}"
+                                                                            <button x-data="{id:'modalForAdeshDakhun'}"
                                                                                 x-on:click="$dispatch('modal-overlay',{id})"
                                                                                 class="h-[30px] flex items-center justify-center flex-nowrap py-[10px] px-4 text-[12px] leading-[16px] border border-[#0DB14B] text-[#0DB14B] bg-[#ffffff] hover:bg-[#E7F7ED] rounded-[5px] gap-[5px] ml-auto mr-auto">
                                                                                 <svg width="14" height="13"
@@ -2704,7 +2704,7 @@
                                                                             তারিখের আদেশের সদয় নির্দেশ মোতাবেক প্রতিবেদন
                                                                             দাখিল ।</td>
                                                                         <td>
-                                                                            <button x-data="{id:'modalForDakhun'}"
+                                                                            <button x-data="{id:'modalForAdeshDakhun'}"
                                                                                 x-on:click="$dispatch('modal-overlay',{id})"
                                                                                 class="h-[30px] flex items-center justify-center flex-nowrap py-[10px] px-4 text-[12px] leading-[16px] border border-[#0DB14B] text-[#0DB14B] bg-[#ffffff] hover:bg-[#E7F7ED] rounded-[5px] gap-[5px] ml-auto mr-auto">
                                                                                 <svg width="14" height="13"
