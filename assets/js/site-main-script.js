@@ -1,8 +1,0 @@
-/**
- * Toggle Responsive Menu
- */
-(function () {
-
-    
-  
-})();
