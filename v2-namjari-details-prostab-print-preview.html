@@ -1314,9 +1314,9 @@
                                 </div>
                                 <template x-if="isShowComment">
                                     <div class="my-4 max-w-sm mx-auto">
-                                        <textarea class="smt-textarea text-[12px] leading-[20px] h-10"
-                                            name="order_comments" id="order_comments" cols="30" rows="5"
-                                            placeholder="লিখুন"></textarea>
+                                        <textarea x-ref="inputCommentBox" type="text"
+                                            class="smt-textarea text-[12px] leading-[20px] h-10" name="inputCommentBox"
+                                            id="inputCommentBox" cols="30" rows="5" placeholder="লিখুন"></textarea>
                                         <div class="flex items-center justify-center gap-4">
                                             <button
                                                 class="h-[30px] w-[30px] flex items-center justify-center flex-nowrap border border-[#0DB14B] text-[#fff] bg-[#0DB14B] hover:bg-[#0DB14B] rounded-[5px]">
@@ -1368,7 +1368,9 @@
                                     </svg>
                                     প্রশস্ত করে দেখুন
                                 </button>
-                                <button @click="isShowComment=true" class="h-[30px] btn-blue-outline">
+                                <button
+                                    @click="isShowComment=true; $nextTick(() => { $refs.inputCommentBox.focus(); });"
+                                    class="h-[30px] btn-blue-outline">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_11550_524" style="mask-type:alpha" maskUnits="userSpaceOnUse"
