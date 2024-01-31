@@ -1110,8 +1110,8 @@
                                         </button>
                                     </template>
                                 </div>
-                                <div class="py-6 flex items-start gap-8">
-                                    <div class="text-xs text-center min-w-52 max-w-xs px-8">
+                                <div class="py-6 flex items-start gap-4">
+                                    <div class="text-xs text-center min-w-52 max-w-xs px-2 pb-6 relative">
                                         <p><b>প্রস্তাবিত খতিয়ান</b></p>
                                         <div @click="isShowComment=true"
                                             class="flex gap-2 mt-2 cursor-pointer w-fit mx-auto hover:underline">
@@ -1125,9 +1125,10 @@
                                         </div>
                                         <!-- this is conditional img show -->
                                         <!-- ./assets/images/signature.png -->
-                                        <div x-data="{isSigImg: './assets/images/signature.png'}" class="px-8 relative">
+
+                                        <div x-data="{isSigImg: './assets/images/signature.png'}" class="px-8">
                                             <button @click="isSigImg=''" x-show="isSigImg"
-                                                class="absolute right-0 top-0 h-[20px] w-[20px] flex items-center justify-center flex-nowrap text-[#DC3545] rounded-[5px]">
+                                                class="absolute bottom-0 left-0 right-0 mx-auto h-[20px] w-[20px] flex items-center justify-center flex-nowrap text-[#DC3545] rounded-[5px]">
                                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -1141,14 +1142,14 @@
                                             </p>
                                         </div>
                                         <hr class="border-black my-2">
-                                        <p>(হিমেল)</p>
-                                        <p>হিমেল ইউনিয়ন ভূমি সরকারি কর্মকর্তা</p>
-                                        <p>দুর্গাপুর ইউনিয়ন ভূমি অফিস</p>
+                                        <div class="space-y-2">
+                                            <p>(হিমেল)</p>
+                                            <p>হিমেল ইউনিয়ন ভূমি সরকারি কর্মকর্তা</p>
+                                            <p>দুর্গাপুর ইউনিয়ন ভূমি অফিস</p>
+                                        </div>
                                     </div>
-
-                                    <div class="text-xs text-center min-w-52 max-w-xs px-8">
-                                        <p><b>প্রস্তাবিত খতিয়ান যাচাই করে সঠিক পাওয়া গেলে যাচাই করে সঠিক পাওয়া
-                                                গেলে</b></p>
+                                    <div class="text-xs text-center min-w-52 max-w-xs px-2 pb-6 relative">
+                                        <p><b>প্রস্তাবিত খতিয়ান</b></p>
                                         <div @click="isShowComment=true"
                                             class="flex gap-2 mt-2 cursor-pointer w-fit mx-auto hover:underline">
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -1160,10 +1161,11 @@
                                             সম্পাদন করুন
                                         </div>
                                         <!-- this is conditional img show -->
-                                        <!-- ./assets/images/signature.png -->
-                                        <div x-data="{isSigImg: ''}" class="px-8 relative">
+                                        <!-- '' -->
+
+                                        <div x-data="{isSigImg: '''}" class="px-8">
                                             <button @click="isSigImg=''" x-show="isSigImg"
-                                                class="absolute right-0 top-0 h-[20px] w-[20px] flex items-center justify-center flex-nowrap text-[#DC3545] rounded-[5px]">
+                                                class="absolute bottom-0 left-0 right-0 mx-auto h-[20px] w-[20px] flex items-center justify-center flex-nowrap text-[#DC3545] rounded-[5px]">
                                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -1177,9 +1179,11 @@
                                             </p>
                                         </div>
                                         <hr class="border-black my-2">
-                                        <p>(হিমেল)</p>
-                                        <p>হিমেল ইউনিয়ন ভূমি সরকারি কর্মকর্তা</p>
-                                        <p>দুর্গাপুর ইউনিয়ন ভূমি অফিস</p>
+                                        <div class="space-y-2">
+                                            <p>(হিমেল)</p>
+                                            <p>হিমেল ইউনিয়ন ভূমি সরকারি কর্মকর্তা</p>
+                                            <p>দুর্গাপুর ইউনিয়ন ভূমি অফিস</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div x-show="isShowComment" class="my-4 max-w-sm mx-auto">
