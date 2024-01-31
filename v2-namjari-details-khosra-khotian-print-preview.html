@@ -1113,6 +1113,16 @@
                                 <div class="py-6 flex items-center gap-8">
                                     <div class="text-xs text-center max-w-sm relative">
                                         <p><b>প্রস্তাবিত খতিয়ান</b></p>
+                                        <div @click="isShowComment=true"
+                                            class="flex gap-2 mt-2 cursor-pointer w-fit mx-auto hover:underline">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 9.64004V11.6667C0 11.8534 0.146667 12 0.333333 12H2.36C2.44667 12 2.53333 11.9667 2.59333 11.9L9.87333 4.62671L7.37333 2.12671L0.1 9.40004C0.0333334 9.46671 0 9.54671 0 9.64004ZM11.8067 2.69338C11.8685 2.6317 11.9175 2.55844 11.951 2.47779C11.9844 2.39714 12.0016 2.31069 12.0016 2.22338C12.0016 2.13606 11.9844 2.04961 11.951 1.96896C11.9175 1.88831 11.8685 1.81505 11.8067 1.75338L10.2467 0.193376C10.185 0.131573 10.1117 0.0825417 10.0311 0.0490874C9.95043 0.0156331 9.86398 -0.00158691 9.77667 -0.00158691C9.68936 -0.00158691 9.6029 0.0156331 9.52225 0.0490874C9.4416 0.0825417 9.36834 0.131573 9.30667 0.193376L8.08667 1.41338L10.5867 3.91338L11.8067 2.69338Z"
+                                                    fill="#2D2D2D" />
+                                            </svg>
+                                            সম্পাদন করুন
+                                        </div>
                                         <div class="px-8">
                                             <img src="./assets/images/signature.png" alt=""
                                                 class="max-w-44 mx-auto p-4">
@@ -1135,34 +1145,32 @@
                                         </button>
                                     </div>
                                 </div>
-                                <template x-if="isShowComment">
-                                    <div class="my-4 max-w-sm mx-auto">
-                                        <textarea x-ref="inputCommentBox" type="text"
-                                            class="smt-textarea text-[12px] leading-[20px] h-12" name="inputCommentBox"
-                                            id="inputCommentBox" cols="30" rows="5"></textarea>
-                                        <div class="flex items-center justify-center gap-4">
-                                            <button
-                                                class="h-[30px] w-[30px] flex items-center justify-center flex-nowrap border border-[#0DB14B] text-[#fff] bg-[#0DB14B] hover:bg-[#0DB14B] rounded-[5px]">
-                                                <svg width="12" height="9" viewBox="0 0 12 9" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M4.36665 8.99994L0.56665 5.19994L1.51665 4.24994L4.36665 7.09994L10.4833 0.983276L11.4333 1.93328L4.36665 8.99994Z"
-                                                        fill="white" />
-                                                </svg>
+                                <div x-show="isShowComment" class="my-4 max-w-sm mx-auto">
+                                    <textarea x-ref="inputCommentBox" type="text"
+                                        class="smt-textarea text-[12px] leading-[20px] h-12" name="inputCommentBox"
+                                        id="inputCommentBox" cols="30" rows="5"></textarea>
+                                    <div class="flex items-center justify-center gap-4">
+                                        <button
+                                            class="h-[30px] w-[30px] flex items-center justify-center flex-nowrap border border-[#0DB14B] text-[#fff] bg-[#0DB14B] hover:bg-[#0DB14B] rounded-[5px]">
+                                            <svg width="12" height="9" viewBox="0 0 12 9" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4.36665 8.99994L0.56665 5.19994L1.51665 4.24994L4.36665 7.09994L10.4833 0.983276L11.4333 1.93328L4.36665 8.99994Z"
+                                                    fill="white" />
+                                            </svg>
 
-                                            </button>
-                                            <button @click="isShowComment=false"
-                                                class="h-[30px] w-[30px] flex items-center justify-center flex-nowrap border border-[#DC3545] text-[#fff] bg-[#DC3545] hover:bg-[#DC3545] rounded-[5px]">
-                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M11.0306 9.96936C11.1715 10.1103 11.2506 10.3014 11.2506 10.5006C11.2506 10.6999 11.1715 10.891 11.0306 11.0319C10.8897 11.1728 10.6986 11.2519 10.4993 11.2519C10.3001 11.2519 10.109 11.1728 9.9681 11.0319L5.99997 7.06249L2.0306 11.0306C1.8897 11.1715 1.69861 11.2507 1.49935 11.2507C1.30009 11.2507 1.10899 11.1715 0.968098 11.0306C0.827202 10.8897 0.748047 10.6986 0.748047 10.4994C0.748047 10.3001 0.827202 10.109 0.968098 9.96811L4.93747 5.99999L0.969348 2.03061C0.828451 1.88972 0.749297 1.69862 0.749297 1.49936C0.749297 1.30011 0.828451 1.10901 0.969348 0.968112C1.11024 0.827216 1.30134 0.748061 1.5006 0.748061C1.69986 0.748061 1.89095 0.827216 2.03185 0.968112L5.99997 4.93749L9.96935 0.967487C10.1102 0.826591 10.3013 0.747437 10.5006 0.747437C10.6999 0.747437 10.891 0.826591 11.0318 0.967487C11.1727 1.10838 11.2519 1.29948 11.2519 1.49874C11.2519 1.69799 11.1727 1.88909 11.0318 2.02999L7.06247 5.99999L11.0306 9.96936Z"
-                                                        fill="white" />
-                                                </svg>
-                                            </button>
-                                        </div>
+                                        </button>
+                                        <button @click="isShowComment=false"
+                                            class="h-[30px] w-[30px] flex items-center justify-center flex-nowrap border border-[#DC3545] text-[#fff] bg-[#DC3545] hover:bg-[#DC3545] rounded-[5px]">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.0306 9.96936C11.1715 10.1103 11.2506 10.3014 11.2506 10.5006C11.2506 10.6999 11.1715 10.891 11.0306 11.0319C10.8897 11.1728 10.6986 11.2519 10.4993 11.2519C10.3001 11.2519 10.109 11.1728 9.9681 11.0319L5.99997 7.06249L2.0306 11.0306C1.8897 11.1715 1.69861 11.2507 1.49935 11.2507C1.30009 11.2507 1.10899 11.1715 0.968098 11.0306C0.827202 10.8897 0.748047 10.6986 0.748047 10.4994C0.748047 10.3001 0.827202 10.109 0.968098 9.96811L4.93747 5.99999L0.969348 2.03061C0.828451 1.88972 0.749297 1.69862 0.749297 1.49936C0.749297 1.30011 0.828451 1.10901 0.969348 0.968112C1.11024 0.827216 1.30134 0.748061 1.5006 0.748061C1.69986 0.748061 1.89095 0.827216 2.03185 0.968112L5.99997 4.93749L9.96935 0.967487C10.1102 0.826591 10.3013 0.747437 10.5006 0.747437C10.6999 0.747437 10.891 0.826591 11.0318 0.967487C11.1727 1.10838 11.2519 1.29948 11.2519 1.49874C11.2519 1.69799 11.1727 1.88909 11.0318 2.02999L7.06247 5.99999L11.0306 9.96936Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </button>
                                     </div>
-                                </template>
+                                </div>
                             </div>
                             <div class="flex items-center justify-center gap-4">
                                 <button @click="isShow=true" class="h-[30px] btn-blue-outline">
