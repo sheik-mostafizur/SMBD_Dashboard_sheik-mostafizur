@@ -27,6 +27,10 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css?v723873834736" />
 
+
+    <!-- playground -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body>
@@ -998,7 +1002,7 @@
                         </div>
                     </div>
                     <div class="tab-content-block bg-white p-4">
-                        <div x-data="{isShow:false}" class="tab-main-content block relative">
+                        <div x-data="{isShow:false, isShowComment:false}" class="tab-main-content block relative">
                             <div class="overflow-x-scroll mb-4">
                                 <div
                                     :class="isShow && 'backdrop-blur-xl bg-white/80 fixed inset-0 z-50 p-4 overflow-x-scroll'">
@@ -1283,6 +1287,59 @@
                                         </button>
                                     </template>
                                 </div>
+                                <div class="py-6 flex items-center gap-8">
+                                    <div class="text-xs text-center max-w-sm">
+                                        <p><b>প্রস্তাবিত খতিয়ান</b></p>
+                                        <div class="px-8 relative">
+                                            <button
+                                                class="absolute right-6 top-0 h-[20px] w-[20px] flex items-center justify-center flex-nowrap text-[#DC3545] rounded-[5px]">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M11.0306 9.96936C11.1715 10.1103 11.2506 10.3014 11.2506 10.5006C11.2506 10.6999 11.1715 10.891 11.0306 11.0319C10.8897 11.1728 10.6986 11.2519 10.4993 11.2519C10.3001 11.2519 10.109 11.1728 9.9681 11.0319L5.99997 7.06249L2.0306 11.0306C1.8897 11.1715 1.69861 11.2507 1.49935 11.2507C1.30009 11.2507 1.10899 11.1715 0.968098 11.0306C0.827202 10.8897 0.748047 10.6986 0.748047 10.4994C0.748047 10.3001 0.827202 10.109 0.968098 9.96811L4.93747 5.99999L0.969348 2.03061C0.828451 1.88972 0.749297 1.69862 0.749297 1.49936C0.749297 1.30011 0.828451 1.10901 0.969348 0.968112C1.11024 0.827216 1.30134 0.748061 1.5006 0.748061C1.69986 0.748061 1.89095 0.827216 2.03185 0.968112L5.99997 4.93749L9.96935 0.967487C10.1102 0.826591 10.3013 0.747437 10.5006 0.747437C10.6999 0.747437 10.891 0.826591 11.0318 0.967487C11.1727 1.10838 11.2519 1.29948 11.2519 1.49874C11.2519 1.69799 11.1727 1.88909 11.0318 2.02999L7.06247 5.99999L11.0306 9.96936Z"
+                                                        fill="#DC3545" />
+                                                </svg>
+                                            </button>
+                                            <img src="./assets/images/signature.png" alt=""
+                                                class="max-w-44 mx-auto p-4">
+
+                                            <p class="font-bold text-right text-sm">৩০/০১/২০২৪
+                                            </p>
+                                        </div>
+                                        <hr class="border-black my-2">
+                                        <p>(হিমেল)</p>
+                                        <p>হিমেল ইউনিয়ন ভূমি সরকারি কর্মকর্তা</p>
+                                        <p>দুর্গাপুর ইউনিয়ন ভূমি অফিস</p>
+                                    </div>
+                                </div>
+                                <template x-if="isShowComment">
+                                    <div class="my-4 max-w-sm mx-auto">
+                                        <textarea class="smt-textarea text-[12px] leading-[20px] h-10"
+                                            name="order_comments" id="order_comments" cols="30" rows="5"
+                                            placeholder="লিখুন"></textarea>
+                                        <div class="flex items-center justify-center gap-4">
+                                            <button
+                                                class="h-[30px] w-[30px] flex items-center justify-center flex-nowrap border border-[#0DB14B] text-[#fff] bg-[#0DB14B] hover:bg-[#0DB14B] rounded-[5px]">
+                                                <svg width="12" height="9" viewBox="0 0 12 9" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M4.36665 8.99994L0.56665 5.19994L1.51665 4.24994L4.36665 7.09994L10.4833 0.983276L11.4333 1.93328L4.36665 8.99994Z"
+                                                        fill="white" />
+                                                </svg>
+
+                                            </button>
+                                            <button @click="isShowComment=false"
+                                                class="h-[30px] w-[30px] flex items-center justify-center flex-nowrap border border-[#DC3545] text-[#fff] bg-[#DC3545] hover:bg-[#DC3545] rounded-[5px]">
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M11.0306 9.96936C11.1715 10.1103 11.2506 10.3014 11.2506 10.5006C11.2506 10.6999 11.1715 10.891 11.0306 11.0319C10.8897 11.1728 10.6986 11.2519 10.4993 11.2519C10.3001 11.2519 10.109 11.1728 9.9681 11.0319L5.99997 7.06249L2.0306 11.0306C1.8897 11.1715 1.69861 11.2507 1.49935 11.2507C1.30009 11.2507 1.10899 11.1715 0.968098 11.0306C0.827202 10.8897 0.748047 10.6986 0.748047 10.4994C0.748047 10.3001 0.827202 10.109 0.968098 9.96811L4.93747 5.99999L0.969348 2.03061C0.828451 1.88972 0.749297 1.69862 0.749297 1.49936C0.749297 1.30011 0.828451 1.10901 0.969348 0.968112C1.11024 0.827216 1.30134 0.748061 1.5006 0.748061C1.69986 0.748061 1.89095 0.827216 2.03185 0.968112L5.99997 4.93749L9.96935 0.967487C10.1102 0.826591 10.3013 0.747437 10.5006 0.747437C10.6999 0.747437 10.891 0.826591 11.0318 0.967487C11.1727 1.10838 11.2519 1.29948 11.2519 1.49874C11.2519 1.69799 11.1727 1.88909 11.0318 2.02999L7.06247 5.99999L11.0306 9.96936Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </template>
                             </div>
                             <div class="flex items-center justify-center gap-4">
                                 <button @click="isShow=true" class="h-[30px] btn-blue-outline">
@@ -1310,6 +1367,31 @@
                                         </defs>
                                     </svg>
                                     প্রশস্ত করে দেখুন
+                                </button>
+                                <button @click="isShowComment=true" class="h-[30px] btn-blue-outline">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_11550_524" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="0" y="0" width="11" height="11">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0.958008 0.958496H10.809V10.8098H0.958008V0.958496Z" fill="white" />
+                                        </mask>
+                                        <g mask="url(#mask0_11550_524)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M3.29938 9.51787C3.56521 9.51787 3.81592 9.61871 4.08129 9.7255C5.707 10.4772 7.62971 10.1352 8.88233 8.88308C10.5351 7.22941 10.5351 4.53945 8.88233 2.8867C8.08208 2.08645 7.01783 1.646 5.88483 1.646C4.75138 1.646 3.68667 2.08691 2.88688 2.88716C1.63379 4.13933 1.29279 6.06204 2.03758 7.67216C2.14483 7.93754 2.24842 8.19604 2.24842 8.46462C2.24842 8.73275 2.15629 9.00271 2.07517 9.24104C2.00825 9.43721 1.90696 9.73329 1.97204 9.79837C2.03575 9.86437 2.33367 9.76033 2.53029 9.69296C2.76633 9.61229 3.034 9.51971 3.29938 9.51787ZM5.87338 10.8099C5.17304 10.8099 4.46813 10.6619 3.80858 10.3566C3.61425 10.2787 3.43229 10.2054 3.30167 10.2054C3.15133 10.2063 2.94921 10.276 2.75396 10.3433C2.35338 10.4808 1.85471 10.6522 1.48575 10.2847C1.11817 9.91662 1.28775 9.41933 1.42433 9.01921C1.49171 8.82212 1.56092 8.61862 1.56092 8.46462C1.56092 8.33812 1.49996 8.17679 1.40646 7.94441C0.548 6.09045 0.944917 3.85608 2.40104 2.40087C3.33054 1.47091 4.56758 0.958496 5.88438 0.958496C7.20117 0.958496 8.43867 1.47045 9.36817 2.40041C11.2895 4.32175 11.2895 7.44758 9.36817 9.36891C8.42629 10.3112 7.15808 10.8099 5.87338 10.8099Z"
+                                                fill="#0065FF" />
+                                        </g>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M7.69357 6.53288C7.44057 6.53288 7.2334 6.328 7.2334 6.07454C7.2334 5.82109 7.43644 5.61621 7.68944 5.61621H7.69357C7.94657 5.61621 8.1519 5.82109 8.1519 6.07454C8.1519 6.328 7.94657 6.53288 7.69357 6.53288Z"
+                                            fill="#0065FF" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M5.85665 6.53288C5.60365 6.53288 5.39648 6.328 5.39648 6.07454C5.39648 5.82109 5.59907 5.61621 5.85253 5.61621H5.85665C6.10965 5.61621 6.31498 5.82109 6.31498 6.07454C6.31498 6.328 6.10965 6.53288 5.85665 6.53288Z"
+                                            fill="#0065FF" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.01876 6.53288C3.76576 6.53288 3.55859 6.328 3.55859 6.07454C3.55859 5.82109 3.76164 5.61621 4.01464 5.61621H4.01876C4.27176 5.61621 4.47709 5.82109 4.47709 6.07454C4.47709 6.328 4.27176 6.53288 4.01876 6.53288Z"
+                                            fill="#0065FF" />
+                                    </svg>
+                                    সম্পাদন / মতামত দিন
                                 </button>
                                 <a href="#" class="h-[30px] btn-blue-outline">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
