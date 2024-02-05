@@ -2502,22 +2502,26 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="inner-card mb-5">
+                                                    <div x-data="{isAppRec: false, certificateCopy: false}"
+                                                        class="inner-card mb-5">
                                                         <div class="inner-card-body">
                                                             <div class="input-group mb-4 mt-2 block w-full">
                                                                 <label class="text-[13px] mb-2 block">১) আবেদনটি
                                                                     পূর্ণাঙ্গভাবে পাওয়া গেছে কিনা?</label>
                                                                 <div class="flex items-center justify-start space-x-4">
                                                                     <div class="flex items-center pr-4">
-                                                                        <input id="qus_find_application_yes"
-                                                                            type="radio" name="qus_find_application"
+                                                                        <input
+                                                                            @click="isAppRec=false; certificateCopy=false"
+                                                                            id="qus_find_application_yes" type="radio"
+                                                                            name="qus_find_application"
                                                                             class="w-4 h-4 rounded-full bg-gray-100 border-[#0DB14B] focus:ring-green-500 focus:ring-0 focus:outline-none"
                                                                             value="">
                                                                         <label for="qus_find_application_yes"
                                                                             class="w-full text-[13px] py-1 ml-2 font-medium text-gray-900 cursor-pointer">হ্যাঁ</label>
                                                                     </div>
                                                                     <div class="inline-flex items-center pr-4">
-                                                                        <input id="qus_find_application_no" type="radio"
+                                                                        <input @click="isAppRec=true"
+                                                                            id="qus_find_application_no" type="radio"
                                                                             name="qus_find_application"
                                                                             class="w-4 h-4 rounded-full bg-gray-100 border-[#0DB14B] focus:ring-green-500 focus:ring-0 focus:outline-none"
                                                                             value="">
@@ -2527,20 +2531,54 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="block w-full mb-4 mt-2 pl-4">
+                                                            <div x-show="isAppRec" class="block w-full mb-4 mt-2 pl-4">
                                                                 <label class="text-[13px] mb-2 block">কি কি কাগজ পাওয়া
                                                                     যায়নি</label>
                                                                 <div
                                                                     class="input-group flex items-center justify-start flex-wrap">
                                                                     <div
                                                                         class="w-full mb-3 inline-flex gap-2 flex-nowrap items-center justify-start">
-                                                                        <input class="rounded-md w-[20px] h-[20px]"
+                                                                        <input x-model="certificateCopy"
+                                                                            class="rounded-md w-[20px] h-[20px]"
                                                                             type="checkbox"
                                                                             name="app_uncomplete_papers_1"
                                                                             id="app_uncomplete_papers_1">
                                                                         <label for="app_uncomplete_papers_1"
                                                                             class="text-[13px] block">সংশ্লিষ্ট খতিয়ানের
                                                                             সার্টিফাইড কপি</label>
+                                                                    </div>
+                                                                    <div x-show="certificateCopy"
+                                                                        class="flex items-center gap-4">
+                                                                        <div
+                                                                            class="whitespace-nowrap border py-2 px-3 rounded w-full mb-3 inline-flex gap-2 flex-nowrap items-center justify-start">
+                                                                            <input class="rounded-md w-[20px] h-[20px]"
+                                                                                type="checkbox"
+                                                                                name="app_uncomplete_papers_1_1"
+                                                                                id="app_uncomplete_papers_1_1">
+                                                                            <label for="app_uncomplete_papers_1_1"
+                                                                                class="text-[13px] block">১২৩ (নামজারি)
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="whitespace-nowrap border py-2 px-3 rounded w-full mb-3 inline-flex gap-2 flex-nowrap items-center justify-start">
+                                                                            <input class="rounded-md w-[20px] h-[20px]"
+                                                                                type="checkbox"
+                                                                                name="app_uncomplete_papers_1_2"
+                                                                                id="app_uncomplete_papers_1_2">
+                                                                            <label for="app_uncomplete_papers_1_2"
+                                                                                class="text-[13px] block">৩৪৫ (আর এস)
+                                                                            </label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="whitespace-nowrap border py-2 px-3 rounded w-full mb-3 inline-flex gap-2 flex-nowrap items-center justify-start">
+                                                                            <input class="rounded-md w-[20px] h-[20px]"
+                                                                                type="checkbox"
+                                                                                name="app_uncomplete_papers_1_3"
+                                                                                id="app_uncomplete_papers_1_3">
+                                                                            <label for="app_uncomplete_papers_1_3"
+                                                                                class="text-[13px] block">৬৭৮ (নামজারি)
+                                                                            </label>
+                                                                        </div>
                                                                     </div>
                                                                     <div
                                                                         class="w-full mb-3 inline-flex gap-2 flex-nowrap items-center justify-start">
