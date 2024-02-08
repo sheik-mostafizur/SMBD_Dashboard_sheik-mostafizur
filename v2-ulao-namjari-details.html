@@ -1067,7 +1067,7 @@
                                 </div>
                                 <div class="dash-card-body p-[15px]">
 
-                                    <div x-data="{ tab: 'tabProstabpotro' }">
+                                    <div x-data="{ tab: 'tabNotice' }">
                                         <div
                                             class="dash-tab-menu flex flex-wrap items-center justify-start gap-2 mt-2 mb-4">
                                             <button x-on:click="tab = 'tabFullApplication'"
@@ -1110,6 +1110,25 @@
                                                 </svg>
 
                                                 <span class="tab-btn-text">আদেশনামা</span>
+                                            </button>
+
+                                            <button x-on:click="tab = 'tabNotice'"
+                                                x-bind:class="{ 'tab-active': tab === 'tabNotice' }"
+                                                class="tab-item relative" type="button">
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M7.9987 12.3986C11.7582 12.3986 13.4974 11.9163 13.6654 9.9805C13.6654 8.04603 12.4528 8.17042 12.4528 5.7969C12.4528 3.94292 10.6955 1.8335 7.9987 1.8335C5.30188 1.8335 3.5446 3.94292 3.5446 5.7969C3.5446 8.17042 2.33203 8.04603 2.33203 9.9805C2.50067 11.9236 4.23988 12.3986 7.9987 12.3986Z"
+                                                        stroke="#00684D" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M9.58997 14.4048C8.68055 15.4146 7.26187 15.4266 6.34375 14.4048"
+                                                        stroke="#00684D" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+
+                                                <span class="tab-btn-text">নোটিশ/ শুনানি
+                                                </span>
                                             </button>
 
                                             <button x-on:click="tab = 'tabAttachments'"
@@ -2254,6 +2273,128 @@
                                                                                     </defs>
                                                                                 </svg>
                                                                                 প্রিন্ট
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div x-show="tab === 'tabNotice'" class="tab-content-block">
+                                                <div class="tab-main-content block relative">
+                                                    <div class="flex items-center justify-end pb-4">
+                                                        <button x-data="{id:'modalAddNotice'}"
+                                                            x-on:click="$dispatch('modal-overlay',{id})"
+                                                            class="h-[36px] flex items-center justify-center flex-nowrap py-[10px] px-[20px] text-[13px] leading-[16px] border border-[#0065FF] text-[#ffffff] bg-[#0065FF] hover:bg-opacity-80 rounded-[5px] gap-[5px]">
+                                                            <svg width="13" height="14" viewBox="0 0 13 14" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M6.50078 12.1998C9.37266 12.1998 11.7008 9.87169 11.7008 6.99981C11.7008 4.12792 9.37266 1.7998 6.50078 1.7998C3.6289 1.7998 1.30078 4.12792 1.30078 6.99981C1.30078 9.87169 3.6289 12.1998 6.50078 12.1998ZM7.15078 5.04981C7.15078 4.69082 6.85977 4.39981 6.50078 4.39981C6.1418 4.39981 5.85078 4.69082 5.85078 5.04981V6.34981H4.55078C4.1918 6.34981 3.90078 6.64082 3.90078 6.99981C3.90078 7.35879 4.1918 7.64981 4.55078 7.64981H5.85078V8.94981C5.85078 9.30879 6.1418 9.59981 6.50078 9.59981C6.85977 9.59981 7.15078 9.30879 7.15078 8.94981V7.64981H8.45078C8.80977 7.64981 9.10078 7.35879 9.10078 6.99981C9.10078 6.64082 8.80977 6.34981 8.45078 6.34981H7.15078V5.04981Z"
+                                                                    fill="white" />
+                                                            </svg>
+
+                                                            নতুন নোটিশ/ শুনানি
+                                                            যোগ করুন
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="card-table w-full block relative">
+                                                        <div class="smt-applist-table relative overflow-x-auto">
+                                                            <table
+                                                                class="w-full text-[12px] xl:text-[13px] text-center text-[#545D69]">
+                                                                <thead>
+                                                                    <tr
+                                                                        class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
+                                                                        <th
+                                                                            class="px-3 py-2 2xl:py-3 font-normal align-middle w-[60px]">
+                                                                            <div
+                                                                                class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                                নং</div>
+                                                                        </th>
+                                                                        <th
+                                                                            class="px-3 py-2 2xl:py-3 font-normal align-middle w-[100px]">
+                                                                            <div
+                                                                                class="th-title flex items-center justify-start text-left h-full w-full">
+                                                                                বাদী</div>
+                                                                        </th>
+                                                                        <th
+                                                                            class="px-3 py-2 2xl:py-3 font-normal align-middle w-[100px]">
+                                                                            <div
+                                                                                class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                                বিবাদী</div>
+                                                                        </th>
+                                                                        <th
+                                                                            class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                            <div
+                                                                                class="th-title flex items-center justify-start text-left h-full w-full">
+                                                                                বিষয়</div>
+                                                                        </th>
+                                                                        <th
+                                                                            class="px-3 py-2 2xl:py-3 font-normal align-middle w-[100px]">
+                                                                            <div
+                                                                                class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                                পদক্ষেপ</div>
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="bg-[#FCFCFC]">
+                                                                        <td>১</td>
+                                                                        <td class="break-words">
+                                                                            <p class="text-left">
+                                                                                নাম: মোঃ মিজানুর রহমান মুন্নাঠিকানা:
+                                                                                বাসা/হোল্ডিং:-, গ্রাম/রাস্তা:কাঁটাবাড়িয়া
+                                                                                উত্তরপাড়া, আড়িয়া, ডাকঘর:ডেমাজানী-৫৮০১,
+                                                                                উপজেলা: শাজাহানপুর, জেলা: বগুড়ামোবাইল
+                                                                                নং: 01719466780
+                                                                            </p>
+                                                                        </td>
+                                                                        <td class="break-words">
+                                                                            <p class="text-left">নাম: আলোমগির
+                                                                                মিয়াঠিকানা: কল্যাণপুর,
+                                                                                ঢাকামোবাইল নং: 01600206546
+                                                                                নাম: পারভেজ মিয়াঠিকানা: লালবাগ,
+                                                                                ঢাকামোবাইল
+                                                                                নং: 01600206546
+                                                                                (গং)</p>
+                                                                        </td>
+                                                                        <td class="break-words">
+                                                                            <p class="text-left">এতদ্বারা
+                                                                                আপনাকে/আপনাদেরকে জানানো যাচ্ছে যে,
+                                                                                আবেদনকারী/আবেদনকারীগণ নিম্নতপশীলভূক্ত
+                                                                                সম্পত্তি নিজেদের নামে হেবা সূত্রে রেকর্ড
+                                                                                সংশোধন করে নেয়ার জন্য নিম্নস্বাক্ষরকারীর
+                                                                                আদালতে আবেদন দাখিল করেছেন । সে মতে
+                                                                                উল্লিখিত কেস চালু করা হয়েছে এবং তার
+                                                                                তদন্ত শুনানির জন্য আগামী ১৬/০৫/২০২৩
+                                                                                খ্রি: ধার্য আছে। শুনানির স্থান উপজেলা
+                                                                                ভুমি অফিস ।ধার্য তারিখে পক্ষদ্বয়কে
+                                                                                স্বত্ব দাবীর স্বপক্ষে আদেশে বর্ণিত
+                                                                                প্রয়োজনীয় কাগজপত্র/ দলিলাদি ও স্বাক্ষী
+                                                                                প্রমাণাদিসহ হাজির হয়ে স্ব-স্ব বক্তব্য /
+                                                                                ব্যাখ্যা পেশ অথবা কোন আপত্তি থাকলে তা
+                                                                                লিখিতিভাবে দাখিল করতে বলা হলো। অন্যথায়
+                                                                                আইনগতভাবে একতরফা শুনানীর দ্বারা মামলার
+                                                                                নিষ্পত্তি করা হবে।</p>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <button x-data="{id:'modalAdeshnamPrint'}"
+                                                                                x-on:click="$dispatch('modal-overlay',{id})"
+                                                                                class="h-[30px] btn-green-outline mx-auto">
+                                                                                <svg width="14" height="13"
+                                                                                    viewBox="0 0 14 13" fill="none"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path fill-rule="evenodd"
+                                                                                        clip-rule="evenodd"
+                                                                                        d="M3.9119 8.43818C3.08694 7.7291 2.49815 6.91927 2.22136 6.50054C2.49761 6.08181 3.08694 5.27198 3.9119 4.5629C4.76394 3.83107 5.81586 3.25038 6.99886 3.25038C8.18186 3.25038 9.23378 3.83107 10.0858 4.5629C10.9108 5.27198 11.4996 6.08181 11.7764 6.50054C11.5001 6.91927 10.9108 7.7291 10.0858 8.43818C9.23378 9.17 8.18186 9.7507 6.99886 9.7507C5.81586 9.7507 4.76394 9.17 3.9119 8.43818ZM6.99886 2.16699C5.45403 2.16699 4.1589 2.92265 3.20611 3.74115C2.25007 4.5629 1.58653 5.49191 1.29186 5.94259C1.183 6.10831 1.125 6.30226 1.125 6.50054C1.125 6.69882 1.183 6.89276 1.29186 7.05848C1.58653 7.50917 2.25007 8.43818 3.20611 9.25992C4.15944 10.0784 5.45403 10.8341 6.99886 10.8341C8.54369 10.8341 9.83882 10.0784 10.7916 9.25992C11.7477 8.43818 12.4112 7.50917 12.7059 7.05848C12.9285 6.7183 12.9285 6.28332 12.7059 5.94259C12.4112 5.49191 11.7477 4.5629 10.7916 3.74115C9.83828 2.92265 8.54369 2.16699 6.99886 2.16699ZM5.91553 6.50054C5.91553 6.21321 6.02966 5.93764 6.23283 5.73447C6.43599 5.53129 6.71154 5.41715 6.99886 5.41715C7.28618 5.41715 7.56173 5.53129 7.76489 5.73447C7.96806 5.93764 8.08219 6.21321 8.08219 6.50054C8.08219 6.78787 7.96806 7.06343 7.76489 7.26661C7.56173 7.46978 7.28618 7.58392 6.99886 7.58392C6.71154 7.58392 6.43599 7.46978 6.23283 7.26661C6.02966 7.06343 5.91553 6.78787 5.91553 6.50054ZM6.99886 4.33377C6.42422 4.33377 5.87312 4.56205 5.46679 4.9684C5.06047 5.37475 4.83219 5.92587 4.83219 6.50054C4.83219 7.0752 5.06047 7.62633 5.46679 8.03268C5.87312 8.43903 6.42422 8.66731 6.99886 8.66731C7.5735 8.66731 8.1246 8.43903 8.53092 8.03268C8.93725 7.62633 9.16553 7.0752 9.16553 6.50054C9.16553 5.92587 8.93725 5.37475 8.53092 4.9684C8.1246 4.56205 7.5735 4.33377 6.99886 4.33377Z"
+                                                                                        fill="#00684D" />
+                                                                                </svg>
+
+                                                                                বিস্তারিত দেখুন
                                                                             </button>
                                                                         </td>
                                                                     </tr>
@@ -5128,6 +5269,129 @@
                             alt="Khoshra Khotiyan">
                     </div>
 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- add new notice -->
+    <div class="fixed inset-0 z-50 flex flex-col items-center justify-end overflow-y-auto bg-gray-600 bg-opacity-50 sm:justify-start"
+        x-data="{modal:false}" x-show="modal"
+        x-on:modal-overlay.window="if ($event.detail.id == 'modalAddNotice') modal=true"
+        x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-500"
+        x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+
+        <div class="w-full px-2 my-20 transition-all transform sm:max-w-2xl lg:max-w-[1200px]" role="dialog"
+            aria-modal="true" aria-labelledby="modal-headline" x-show="modal"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 -translate-y-4 sm:translate-y-4"
+            x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4" x-on:click.away="modal=false">
+            <div class="bg-white rounded shadow-sm overflow-hidden">
+                <div class="modalbox-head relative bg-[#F4FFF8] px-4 py-6 sm:p-6 sm:pb-4 border-b border-[#0B9640]">
+
+                    <div class="flex flex-col items-center gap-2 text-left pr-4">
+                        <h3 class="text-[18px] text-[#0B9640]">নতুন নোটিশ/ শুনানি
+                        </h3>
+                    </div>
+
+                    <span
+                        class="absolute right-4 top-4 h-[30px] w-[30px] flex items-center justify-center rounded cursor-pointer"
+                        @click="modal = false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.6698 -0.000976562H14.3398C17.7298 -0.000976562 19.9998 2.37902 19.9998 5.91902V14.09C19.9998 17.62 17.7298 19.999 14.3398 19.999H5.6698C2.2798 19.999 -0.000198364 17.62 -0.000198364 14.09V5.91902C-0.000198364 2.37902 2.2798 -0.000976562 5.6698 -0.000976562ZM13.0098 12.999C13.3498 12.66 13.3498 12.11 13.0098 11.77L11.2298 9.99002L13.0098 8.20902C13.3498 7.87002 13.3498 7.31002 13.0098 6.97002C12.6698 6.62902 12.1198 6.62902 11.7698 6.97002L9.9998 8.74902L8.2198 6.97002C7.8698 6.62902 7.3198 6.62902 6.9798 6.97002C6.6398 7.31002 6.6398 7.87002 6.9798 8.20902L8.7598 9.99002L6.9798 11.76C6.6398 12.11 6.6398 12.66 6.9798 12.999C7.1498 13.169 7.3798 13.26 7.5998 13.26C7.8298 13.26 8.0498 13.169 8.2198 12.999L9.9998 11.23L11.7798 12.999C11.9498 13.18 12.1698 13.26 12.3898 13.26C12.6198 13.26 12.8398 13.169 13.0098 12.999Z"
+                                fill="#FF013E"></path>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="modalbox-body bg-white px-6 py-6 sm:py-6 sm:px-8">
+                    <div>
+                        <div class="input-group block mt-2 mb-4">
+                            <label class="text-[13px] mb-2 block">বাদী</label>
+                            <textarea class="smt-textarea text-[12px] leading-[20px]" name="" id="" cols="30" rows="5"
+                                placeholder="লিখুন"
+                                spellcheck="false">নাম: মোঃ মিজানুর রহমান মুন্নাঠিকানা: বাসা/হোল্ডিং:-, গ্রাম/রাস্তা:কাঁটাবাড়িয়া উত্তরপাড়া, আড়িয়া, ডাকঘর:ডেমাজানী-৫৮০১, উপজেলা: শাজাহানপুর, জেলা: বগুড়ামোবাইল নং: 01719466780</textarea>
+                        </div>
+                        <div class="input-group block mt-2">
+                            <label class="text-[13px] mb-2 block">বিবাদী</label>
+                            <textarea class="smt-textarea text-[12px] leading-[20px]" name="" id="" cols="30" rows="5"
+                                placeholder="লিখুন"
+                                spellcheck="false">নাম: আলোমগির মিয়াঠিকানা: কল্যাণপুর, ঢাকামোবাইল নং: 01600206546 নাম: পারভেজ মিয়াঠিকানা: লালবাগ, ঢাকামোবাইল নং: 01600206546(গং)</textarea>
+                        </div>
+                        <div class="grid gap-4 mb-4 grid-cols-1 md:grid-cols-2">
+                            <div class=" input-group mt-4 ">
+                                <label class=" text-[13px] mb-2 block">কোথায়
+                                    কোথায় ভুল আছে তার বিবরণ লিখুন</label>
+                                <input class="smt-input text-[12px] leading-[20px] !h-[46px]" placeholder="লিখুন"
+                                    value="" type="text" name="">
+                            </div>
+                            <div class="input-group mt-4 ">
+                                <label class="text-[13px] mb-2 block">কোথায়
+                                    কোথায় ভুল আছে তার বিবরণ লিখুন</label>
+                                <input class="smt-input text-[12px] leading-[20px] !h-[46px]" placeholder="লিখুন"
+                                    value="" type="text" name="">
+                            </div>
+                        </div>
+                        <div class="input-group block mt-2 mb-4">
+                            <label class="text-[13px] mb-2 block">মূল নোটিশ</label>
+                            <textarea class="smt-textarea text-[12px] leading-[20px] min-h-[100px]" name="" id=""
+                                cols="30" rows="5" placeholder="Enter" spellcheck="false"></textarea>
+                        </div>
+                        <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
+                            <!-- TODO: REPLACE this input  -->
+                            <div class=" input-group ">
+                                <label class=" text-[13px] mb-2 block">কোথায়
+                                    কোথায় ভুল আছে তার বিবরণ লিখুন</label>
+                                <input class="smt-input text-[12px] leading-[20px] !h-[46px]" placeholder="লিখুন"
+                                    value="" type="text" name="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modalbox-head relative bg-[#F4FFF8] px-4 py-6 sm:p-6 sm:pb-4 border-b border-[#0B9640]">
+
+                    <div class="flex items-center justify-center gap-2 text-left pr-4">
+                        <button @click="modal = false" class="h-[30px] btn-red-outline">
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_12486_54288)">
+                                    <path
+                                        d="M5.5 0C4.41221 0 3.34884 0.322569 2.44437 0.926917C1.5399 1.53127 0.834947 2.39025 0.418665 3.39524C0.00238307 4.40024 -0.106535 5.5061 0.105683 6.573C0.317902 7.63989 0.841727 8.6199 1.61092 9.38909C2.3801 10.1583 3.36011 10.6821 4.42701 10.8943C5.4939 11.1065 6.59977 10.9976 7.60476 10.5813C8.60976 10.1651 9.46874 9.46011 10.0731 8.55564C10.6774 7.65117 11 6.5878 11 5.5C11 4.04131 10.4205 2.64236 9.38909 1.61091C8.35764 0.579463 6.95869 0 5.5 0V0ZM7.65738 7.00929L7.0093 7.65738L5.5 6.14808L3.99071 7.65738L3.34263 7.00929L4.85192 5.5L3.34263 3.99071L3.99071 3.34263L5.5 4.85192L7.0093 3.34263L7.65738 3.99071L6.14809 5.5L7.65738 7.00929Z"
+                                        fill="#F42A41" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_12486_54288">
+                                        <rect width="11" height="11" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>বাতিল
+                        </button>
+
+
+                        <button class="h-[30px] btn-blue-outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M3.38744 7.63939C2.6894 7.03941 2.19119 6.35416 1.95699 5.99985C2.19074 5.64555 2.6894 4.9603 3.38744 4.36032C4.1084 3.74108 4.99849 3.24972 5.99949 3.24972C7.00049 3.24972 7.89057 3.74108 8.61153 4.36032C9.30957 4.9603 9.80778 5.64555 10.042 5.99985C9.80824 6.35416 9.30957 7.03941 8.61153 7.63939C7.89057 8.25863 7.00049 8.74999 5.99949 8.74999C4.99849 8.74999 4.1084 8.25863 3.38744 7.63939ZM5.99949 2.33301C4.69232 2.33301 3.59644 2.97241 2.79024 3.66499C1.98128 4.36032 1.41982 5.1464 1.17049 5.52775C1.07838 5.66797 1.0293 5.83208 1.0293 5.99985C1.0293 6.16763 1.07838 6.33174 1.17049 6.47196C1.41982 6.85331 1.98128 7.63939 2.79024 8.33472C3.5969 9.02729 4.69232 9.6667 5.99949 9.6667C7.30665 9.6667 8.40253 9.02729 9.20874 8.33472C10.0177 7.63939 10.5792 6.85331 10.8285 6.47196C11.0169 6.18411 11.0169 5.81605 10.8285 5.52775C10.5792 5.1464 10.0177 4.36032 9.20874 3.66499C8.40207 2.97241 7.30665 2.33301 5.99949 2.33301ZM5.08282 5.99985C5.08282 5.75673 5.1794 5.52356 5.35131 5.35164C5.52321 5.17972 5.75637 5.08314 5.99949 5.08314C6.2426 5.08314 6.47576 5.17972 6.64767 5.35164C6.81958 5.52356 6.91615 5.75673 6.91615 5.99985C6.91615 6.24298 6.81958 6.47615 6.64767 6.64807C6.47576 6.81998 6.2426 6.91657 5.99949 6.91657C5.75637 6.91657 5.52321 6.81998 5.35131 6.64807C5.1794 6.47615 5.08282 6.24298 5.08282 5.99985ZM5.99949 4.16643C5.51326 4.16643 5.04694 4.35959 4.70312 4.70343C4.35931 5.04726 4.16615 5.5136 4.16615 5.99985C4.16615 6.48611 4.35931 6.95245 4.70312 7.29628C5.04694 7.64011 5.51326 7.83328 5.99949 7.83328C6.48572 7.83328 6.95203 7.64011 7.29585 7.29628C7.63967 6.95245 7.83282 6.48611 7.83282 5.99985C7.83282 5.5136 7.63967 5.04726 7.29585 4.70343C6.95203 4.35959 6.48572 4.16643 5.99949 4.16643V4.16643Z"
+                                    fill="#0063F7"></path>
+                            </svg>
+                            বিস্তারিত দেখুন
+                        </button>
+                        <button
+                            class="h-[36px] flex items-center justify-center flex-nowrap py-[8px] px-6 text-[13px] leading-[18px] text-[#F2F2F2] bg-[#0DB14B] hover:bg-opacity-90 rounded-[5px] gap-[5px]">
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.375 2.63542C1.375 2.30113 1.50779 1.98054 1.74417 1.74417C1.98054 1.50779 2.30113 1.375 2.63542 1.375H7.20225C7.39794 1.37495 7.59172 1.41346 7.77252 1.48833C7.95332 1.5632 8.11759 1.67296 8.25596 1.81133L9.18867 2.74404C9.46825 3.02363 9.625 3.40267 9.625 3.79775V8.36458C9.625 8.69887 9.49221 9.01946 9.25583 9.25583C9.01946 9.49221 8.69887 9.625 8.36458 9.625H2.63542C2.30113 9.625 1.98054 9.49221 1.74417 9.25583C1.50779 9.01946 1.375 8.69887 1.375 8.36458V2.63542ZM2.63542 2.0625C2.31917 2.0625 2.0625 2.31917 2.0625 2.63542V8.36458C2.0625 8.68083 2.31917 8.9375 2.63542 8.9375H2.75V6.53125C2.75 6.25775 2.85865 5.99544 3.05205 5.80205C3.24544 5.60865 3.50775 5.5 3.78125 5.5H7.21875C7.49226 5.5 7.75456 5.60865 7.94796 5.80205C8.14135 5.99544 8.25 6.25775 8.25 6.53125V8.9375H8.36458C8.68083 8.9375 8.9375 8.68083 8.9375 8.36458V3.79775C8.9375 3.58463 8.85317 3.38067 8.70238 3.23033L7.76967 2.29763C7.65126 2.17902 7.49867 2.10048 7.33333 2.07304V3.32292C7.33333 3.45834 7.30666 3.59244 7.25484 3.71756C7.20301 3.84268 7.12705 3.95636 7.03129 4.05212C6.93553 4.14788 6.82184 4.22384 6.69673 4.27567C6.57161 4.32749 6.43751 4.35417 6.30208 4.35417H4.23958C3.96608 4.35417 3.70378 4.24552 3.51038 4.05212C3.31698 3.85872 3.20833 3.59642 3.20833 3.32292V2.0625H2.63542ZM7.5625 8.9375V6.53125C7.5625 6.44008 7.52629 6.35265 7.46182 6.28818C7.39735 6.22372 7.30992 6.1875 7.21875 6.1875H3.78125C3.69008 6.1875 3.60265 6.22372 3.53818 6.28818C3.47372 6.35265 3.4375 6.44008 3.4375 6.53125V8.9375H7.5625ZM3.89583 2.0625V3.32292C3.89583 3.51267 4.04983 3.66667 4.23958 3.66667H6.30208C6.39325 3.66667 6.48069 3.63045 6.54515 3.56599C6.60962 3.50152 6.64583 3.41409 6.64583 3.32292V2.0625H3.89583Z"
+                                    fill="white" />
+                            </svg>
+
+                            সংরক্ষণ ও প্রেরণ </button>
+                    </div>
                 </div>
             </div>
         </div>
