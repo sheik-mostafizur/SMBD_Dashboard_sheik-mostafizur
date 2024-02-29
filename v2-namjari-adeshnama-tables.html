@@ -26,7 +26,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css?v723873834736" />
-
+    <!-- playground -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -343,10 +344,20 @@
                 </div>
             </div>
         </div>
-
+        <!-- When anyone print the document isPrintTime area will be hide then again back up 100ms -->
         <header id="siteHeader" class="bg-white border-b border-[#EBEEF2] relative z-50">
             <div class="container mx-auto">
-                <div class="flex justify-between items-center py-2 h-[58px]">
+                <div class="flex justify-between items-center py-2 h-[58px]" x-data="{isPrintTime: true}" x-init="
+                window.addEventListener('keydown', event => {
+                    if (event.ctrlKey && event.key === 'p') {
+                        console.log('HI')
+                        event.preventDefault();
+                        isPrintTime = false;
+                        setTimeout(() => window.print(), 50);
+                        setTimeout(() => isPrintTime = true, 100);
+                    }
+                });
+             ">
                     <div class="flex items-center">
                         <button
                             class="smtSidebarNavBtn mr-2 text-center text-gray-500 w-6 h-6 p-1 pl-0 focus:outline-none lg:hidden">
@@ -361,7 +372,7 @@
                         </a>
                     </div>
 
-                    <div class="flex items-center">
+                    <div x-show="isPrintTime" class="flex items-center">
                         <div
                             class="justify-center items-center border border-gray-200 rounded-sm p-2 bg-white relative h-10 hidden md:flex">
                             <input
@@ -986,30 +997,9 @@
         </div>
 
         <main id="mainContent" class="flex-1 overflow-x-hidden overflow-y-auto bg-[#f8f9fd]">
-
-            <div class="smt-breadcrumb">
-                <nav class="container">
-                    <ol class="list-reset py-[15px] flex items-center relative">
-                        <li class="px-2"><a href="v2-kash-khotiyan.html"
-                                class="no-underline text-[13px] text-[#6B788E] hover:text-[#18662A]">নামজারির
-                                আবেদনসমূহ</a>
-                        </li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                aria-hidden="true" class="w-[18px] h-[18px] fill-[#6B788E]">
-                                <path fill-rule="evenodd"
-                                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                                    clip-rule="evenodd"></path>
-                            </svg></li>
-                        <li class="px-2"><a href="#" class="no-underline text-[13px] text-[#6B788E]">আদেশনামা</a>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-
             <div class="container">
-                <div class="dash-sec-block relative w-full mb-6">
+                <div class="dash-sec-block relative w-full py-6">
                     <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-4">
-
                         <div class="col-namhari-info lg:col-span-3">
                             <div
                                 class="smt-dash-card w-full bg-white rounded-[6px] overflow-hidden border border-[#0F6849]">
@@ -1026,41 +1016,13 @@
                                         </span>
                                         <h3 class="text-[13px] xl:text-[14px] leading-tight">আদেশনামা</h3>
                                     </div>
-                                    <div class="btn-group inline-flex gap-[8px]">
-                                        <button
-                                            class="h-[30px] w-[30px] flex items-center justify-center flex-nowrap p-[5px] text-[12px] leading-[16px] border border-[#0A7B53] text-[#F2F2F2] bg-[#07422D] hover:bg-opacity-90 rounded-[5px] gap-[5px]">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12"
-                                                viewBox="0 0 11 12" fill="none">
-                                                <g clip-path="url(#clip0_6235_139143)">
-                                                    <path
-                                                        d="M8.70825 11.5002H7.79158C7.67003 11.5002 7.55345 11.4519 7.46749 11.3659C7.38154 11.28 7.33325 11.1634 7.33325 11.0418C7.33325 10.9203 7.38154 10.8037 7.46749 10.7177C7.55345 10.6318 7.67003 10.5835 7.79158 10.5835H8.70825C9.07292 10.5835 9.42266 10.4386 9.68052 10.1808C9.93838 9.9229 10.0832 9.57317 10.0832 9.20849V8.29183C10.0832 8.17027 10.1315 8.05369 10.2175 7.96774C10.3034 7.88178 10.42 7.8335 10.5416 7.8335C10.6631 7.8335 10.7797 7.88178 10.8657 7.96774C10.9516 8.05369 10.9999 8.17027 10.9999 8.29183V9.20849C10.9992 9.81606 10.7575 10.3985 10.3279 10.8281C9.89828 11.2578 9.31581 11.4994 8.70825 11.5002Z"
-                                                        fill="white" />
-                                                    <path
-                                                        d="M0.458333 4.16667C0.336776 4.16667 0.220197 4.11838 0.134243 4.03242C0.0482886 3.94647 0 3.82989 0 3.70833V2.79167C0.000727768 2.1841 0.242404 1.60163 0.672017 1.17202C1.10163 0.742404 1.6841 0.500728 2.29167 0.5L3.20833 0.5C3.32989 0.5 3.44647 0.548289 3.53242 0.634243C3.61838 0.720197 3.66667 0.836776 3.66667 0.958333C3.66667 1.07989 3.61838 1.19647 3.53242 1.28242C3.44647 1.36838 3.32989 1.41667 3.20833 1.41667H2.29167C1.92699 1.41667 1.57726 1.56153 1.31939 1.81939C1.06153 2.07726 0.916667 2.42699 0.916667 2.79167V3.70833C0.916667 3.82989 0.868378 3.94647 0.782424 4.03242C0.69647 4.11838 0.579891 4.16667 0.458333 4.16667Z"
-                                                        fill="white" />
-                                                    <path
-                                                        d="M3.20833 11.5002H2.29167C1.6841 11.4994 1.10163 11.2578 0.672017 10.8281C0.242404 10.3985 0.000727768 9.81606 0 9.20849L0 8.29183C0 8.17027 0.0482886 8.05369 0.134243 7.96774C0.220197 7.88178 0.336776 7.8335 0.458333 7.8335C0.579891 7.8335 0.69647 7.88178 0.782424 7.96774C0.868378 8.05369 0.916667 8.17027 0.916667 8.29183V9.20849C0.916667 9.57317 1.06153 9.9229 1.31939 10.1808C1.57726 10.4386 1.92699 10.5835 2.29167 10.5835H3.20833C3.32989 10.5835 3.44647 10.6318 3.53242 10.7177C3.61838 10.8037 3.66667 10.9203 3.66667 11.0418C3.66667 11.1634 3.61838 11.28 3.53242 11.3659C3.44647 11.4519 3.32989 11.5002 3.20833 11.5002Z"
-                                                        fill="white" />
-                                                    <path
-                                                        d="M10.5416 4.16667C10.42 4.16667 10.3034 4.11838 10.2175 4.03242C10.1315 3.94647 10.0832 3.82989 10.0832 3.70833V2.79167C10.0832 2.42699 9.93838 2.07726 9.68052 1.81939C9.42266 1.56153 9.07292 1.41667 8.70825 1.41667H7.79158C7.67003 1.41667 7.55345 1.36838 7.46749 1.28242C7.38154 1.19647 7.33325 1.07989 7.33325 0.958333C7.33325 0.836776 7.38154 0.720197 7.46749 0.634243C7.55345 0.548289 7.67003 0.5 7.79158 0.5H8.70825C9.31581 0.500728 9.89828 0.742404 10.3279 1.17202C10.7575 1.60163 10.9992 2.1841 10.9999 2.79167V3.70833C10.9999 3.82989 10.9516 3.94647 10.8657 4.03242C10.7797 4.11838 10.6631 4.16667 10.5416 4.16667Z"
-                                                        fill="white" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_6235_139143">
-                                                        <rect width="11" height="11" fill="white"
-                                                            transform="translate(0 0.5)" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </button>
-                                    </div>
                                 </div>
 
                                 <div class="dash-card-body p-[15px]">
                                     <div class="inner-card mb-6">
-                                        <div class="inner-card-head">
+                                        <div class="bg-white py-3 px-4 text-[13px] font-bold text-black">
                                             <label class="text-[13px] inline-flex items-center gap-2"> <span
-                                                    class="h-[26px] w-[26px] text-[14px] flex items-center justify-center bg-[#F5FFF9] border border-[#F4F6F9] rounded-full">১</span>আদেশ
+                                                    class="h-[26px] w-[26px] text-[14px] flex items-center justify-center rounded-full">১</span>আদেশ
                                                 ১ (আবেদনপত্র গ্রহণ ও তদন্তের জন্য
                                                 প্রেরণ)</label>
                                         </div>
@@ -1069,7 +1031,7 @@
                                                 <div class="block w-full">
                                                     <div class="card-table w-full block relative">
                                                         <div class="overflow-hidden">
-                                                            <div class="p-4 block w-full relative">
+                                                            <div class="px-4 pb-4 block w-full relative">
                                                                 <div class="block w-full">
                                                                     <p class="block py-[5px] text-[12px] m-0 text-left">
                                                                         বাংলাদেশ ফরম
@@ -1209,10 +1171,11 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="inner-card mb-6">
-                                        <div class="inner-card-head">
+                                        <div class="bg-white py-3 px-4 text-[13px] font-bold text-black">
                                             <label class="text-[13px] inline-flex items-center gap-2"> <span
-                                                    class="h-[26px] w-[26px] text-[14px] flex items-center justify-center bg-[#F5FFF9] border border-[#F4F6F9] rounded-full">২</span>আদেশ
+                                                    class="h-[26px] w-[26px] text-[14px] flex items-center justify-center rounded-full">১</span>আদেশ
                                                 ১ (আবেদনপত্র গ্রহণ ও তদন্তের জন্য
                                                 প্রেরণ)</label>
                                         </div>
@@ -1221,7 +1184,7 @@
                                                 <div class="block w-full">
                                                     <div class="card-table w-full block relative">
                                                         <div class="overflow-hidden">
-                                                            <div class="p-4 block w-full relative">
+                                                            <div class="px-4 pb-4 block w-full relative">
                                                                 <div class="block w-full">
                                                                     <p class="block py-[5px] text-[12px] m-0 text-left">
                                                                         বাংলাদেশ ফরম
@@ -1360,20 +1323,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div
-                                        class="w-full relative py-4 flex flex-wrap items-center justify-center gap-4 mb-4">
-                                        <button
-                                            class="h-[36px] flex items-center justify-center flex-nowrap py-[10px] px-[20px] text-[13px] leading-[16px] border border-[#EBECEF] text-[#071638] bg-[#EBECEF] hover:bg-opacity-80 rounded-[5px] gap-[5px]">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                                                viewBox="0 0 12 12" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M5.6839 1.31409C5.76914 1.23283 5.88238 1.1875 6.00015 1.1875C6.11791 1.1875 6.23116 1.23283 6.3164 1.31409L9.98306 4.80613L11.1289 5.89696C11.217 5.98084 11.2682 6.09629 11.2712 6.21791C11.2742 6.33954 11.2288 6.45738 11.1449 6.54551C11.0611 6.63363 10.9456 6.68483 10.824 6.68784C10.7024 6.69085 10.5845 6.64542 10.4964 6.56155L10.1251 6.20725V9.66676C10.1251 9.90987 10.0286 10.143 9.85666 10.3149C9.68475 10.4868 9.4516 10.5834 9.20848 10.5834H2.79181C2.5487 10.5834 2.31554 10.4868 2.14363 10.3149C1.97172 10.143 1.87514 9.90987 1.87514 9.66676V6.20725L1.50389 6.56109C1.41589 6.64496 1.29817 6.69044 1.17663 6.68752C1.05509 6.6846 0.939686 6.63351 0.855811 6.54551C0.771937 6.4575 0.726458 6.33978 0.729381 6.21824C0.732303 6.0967 0.783387 5.9813 0.871395 5.89742L2.01723 4.80613L5.6839 1.31363V1.31409ZM2.79181 5.33459V9.66676H4.62515V7.37509C4.62515 7.01042 4.77001 6.66068 5.02787 6.40282C5.28574 6.14495 5.63547 6.00009 6.00015 6.00009C6.36482 6.00009 6.71456 6.14495 6.97242 6.40282C7.23028 6.66068 7.37515 7.01042 7.37515 7.37509V9.66676H9.20848V5.33459L6.00015 2.27842L2.79181 5.33413V5.33459ZM6.45848 9.66676V7.37509C6.45848 7.25353 6.41019 7.13695 6.32424 7.051C6.23828 6.96504 6.1217 6.91676 6.00015 6.91676C5.87859 6.91676 5.76201 6.96504 5.67606 7.051C5.5901 7.13695 5.54181 7.25353 5.54181 7.37509V9.66676H6.45848Z"
-                                                    fill="#091E42"></path>
-                                            </svg>
-                                            পূর্ববর্তী
-                                        </button>
                                     </div>
                                 </div>
                             </div>
