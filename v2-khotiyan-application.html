@@ -26,7 +26,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css?v723873834736" />
-
+    <!-- playground -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -1568,6 +1569,337 @@
             x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4" x-on:click.away="modal=false">
             <div class="bg-white rounded shadow-sm overflow-hidden">
                 <div class="modalbox-head relative bg-[#F4FFF8] px-4 py-6 sm:p-6 sm:pb-4 border-b border-[#0B9640]">
+                    <h3 class="text-[18px] text-[#0B9640] text-center pr-4">আগত খতিয়ানের তথ্য</h3>
+                    <span
+                        class="absolute right-2 top-2 h-[30px] w-[30px] flex items-center justify-center rounded cursor-pointer"
+                        @click="modal = false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                            fill="#f42a41">
+                            <path opacity="0.4"
+                                d="M14.34 0H5.67C2.28 0 0 2.38 0 5.92V14.09C0 17.62 2.28 20 5.67 20H14.34C17.73 20 20 17.62 20 14.09V5.92C20 2.38 17.73 0 14.34 0Z"
+                                fill="#f42a41" />
+                            <path
+                                d="M13.0163 11.7705L11.2373 9.9925L13.0153 8.2145C13.3573 7.8735 13.3573 7.3185 13.0153 6.9775C12.6733 6.6335 12.1203 6.6345 11.7783 6.9765L9.99931 8.7545L8.22031 6.9745C7.87831 6.6325 7.32431 6.6345 6.98231 6.9745C6.64131 7.3165 6.64131 7.8715 6.98231 8.2125L8.76231 9.9925L6.98631 11.7675C6.64431 12.1095 6.64431 12.6645 6.98631 13.0045C7.15731 13.1765 7.38031 13.2615 7.60431 13.2615C7.82931 13.2615 8.05231 13.1765 8.22331 13.0055L9.99931 11.2295L11.7793 13.0085C11.9503 13.1795 12.1733 13.2645 12.3973 13.2645C12.6213 13.2645 12.8453 13.1785 13.0163 13.0085C13.3583 12.6665 13.3583 12.1125 13.0163 11.7705Z"
+                                fill="#f42a41" />
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="modalbox-body bg-white px-6 py-6 sm:py-6 sm:px-8">
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-5 w-full">
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">বিভাগ <span class="text-red-500">*</span></label>
+                            <select class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                <option>নির্বাচন করুন</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">জেলা <span class="text-red-500">*</span></label>
+                            <select class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                <option>নির্বাচন করুন</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">উপজেলা <span class="text-red-500">*</span></label>
+                            <select class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                <option>নির্বাচন করুন</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">মৌজা <span class="text-red-500">*</span></label>
+                            <select class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                <option>নির্বাচন করুন</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">জে.এল নং</label>
+                            <input class="smt-input text-[12px] leading-[20px]" placeholder="জে.এল নং" value=""
+                                type="text" name="owner_name" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3  w-full">
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">খতিয়ানের ধরন <span
+                                    class="text-red-500">*</span></label>
+                            <select class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                <option>নির্বাচন করুন</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">খতিয়ান নং</label>
+                            <input class="smt-input text-[12px] leading-[20px]" placeholder="খতিয়ান নং" value=""
+                                type="text" name="owner_name" />
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">নামজারী মামলা নম্বর</label>
+                            <input class="smt-input text-[12px] leading-[20px]" placeholder="নামজারী মামলা নম্বর"
+                                value="" type="text" name="owner_name" />
+                        </div>
+                    </div>
+
+                    <div
+                        class="smt-dash-card w-full bg-white rounded-[6px] overflow-hidden border border-[#EBEDF0] mb-6">
+                        <div
+                            class="dash-card-head bg-[#EBEDF0] text-[#22304E] px-[15px] py-[10px] flex items-center justify-between flex-wrap gap-[10px]">
+                            <div class="card-title flex flex-nowrap gap-[10px] items-center">
+                                <h3 class="text-[13px] leading-tight">দাগের তথ্য</h3>
+                            </div>
+                            <div class="btn-group inline-flex gap-[8px]">
+                                <button
+                                    class="h-[30px] flex items-center justify-center flex-nowrap py-[10px] px-4 text-[13px] leading-[16px] border border-[#17A2B7] text-[#ffffff] bg-[#17A2B7] hover:bg-[#17A2B7] rounded-[5px] gap-[5px]">
+                                    <svg class="w-[18px] h-[18px]" xmlns="http://www.w3.org/2000/svg" width="11"
+                                        height="12" viewBox="0 0 11 12" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M5.5001 10.4001C7.93015 10.4001 9.9001 8.43015 9.9001 6.0001C9.9001 3.57005 7.93015 1.6001 5.5001 1.6001C3.07005 1.6001 1.1001 3.57005 1.1001 6.0001C1.1001 8.43015 3.07005 10.4001 5.5001 10.4001ZM6.0501 4.3501C6.0501 4.04634 5.80385 3.8001 5.5001 3.8001C5.19634 3.8001 4.9501 4.04634 4.9501 4.3501V5.4501H3.8501C3.54634 5.4501 3.3001 5.69634 3.3001 6.0001C3.3001 6.30385 3.54634 6.5501 3.8501 6.5501H4.9501V7.6501C4.9501 7.95386 5.19634 8.2001 5.5001 8.2001C5.80385 8.2001 6.0501 7.95386 6.0501 7.6501V6.5501H7.1501C7.45386 6.5501 7.7001 6.30385 7.7001 6.0001C7.7001 5.69634 7.45386 5.4501 7.1501 5.4501H6.0501V4.3501Z"
+                                            fill="white"></path>
+                                    </svg>
+                                    আরো দাগ সংযুক্ত করুন
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dash-card-body p-[15px]">
+                            <div class="grid grid-cols-1 gap-4 md:grid-cols-3  w-full">
+                                <div class="input-group mb-4 block">
+                                    <label class="text-[13px] mb-2 block">দাগ নং</label>
+                                    <input class="smt-input text-[12px] leading-[20px]" placeholder="দাগ নং" value=""
+                                        type="text" name="owner_name">
+                                </div>
+                                <div class="input-group mb-4 block">
+                                    <label class="text-[13px] mb-2 block">জোত নম্বর</label>
+                                    <input class="smt-input text-[12px] leading-[20px]" placeholder="জোত নম্বর" value=""
+                                        type="text" name="owner_name">
+                                </div>
+                                <div class="input-group mb-4 block">
+                                    <label class="text-[13px] mb-2 block">ভূমি উন্নয়ন কর</label>
+                                    <input class="smt-input text-[12px] leading-[20px]" placeholder="ভূমি উন্নয়ন কর"
+                                        value="" type="text" name="owner_name">
+                                </div>
+                            </div>
+
+                            <div class="inner-card mb-6">
+                                <div class="inner-card-head">
+                                    <label class="text-[13px] inline-flex items-center gap-2">
+                                        জমির শ্রেণী
+                                    </label>
+                                </div>
+                                <div class="inner-card-body">
+                                    <div class="smt_case_status_filter_block relative w-full block">
+                                        <div class="block w-full">
+                                            <div class="card-table w-full block relative">
+                                                <div class="smt-applist-table relative overflow-x-auto">
+                                                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2  w-full">
+                                                        <div class="input-group mb-4 block">
+                                                            <label class="text-[13px] mb-2 block">রেকডীয় শ্রেণী <span
+                                                                    class="text-red-500">*</span></label>
+                                                            <select
+                                                                class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                                                <option>নির্বাচন করুন</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="input-group mb-4 block">
+                                                            <label class="text-[13px] mb-2 block">ব্যবহার ভিত্তিক শ্রেণী
+                                                                <span class="text-red-500">*</span></label>
+                                                            <select
+                                                                class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                                                <option>নির্বাচন করুন</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="input-group mb-4 block">
+                                                            <label class="text-[13px] mb-2 block">দাগে মোট জমির
+                                                                পরিমাণ</label>
+                                                            <input class="smt-input text-[12px] leading-[20px]"
+                                                                placeholder="০,০০০০" value="" type="text"
+                                                                name="owner_name">
+                                                        </div>
+                                                        <div class="input-group mb-4 block">
+                                                            <label class="text-[13px] mb-2 block">অংশ</label>
+                                                            <input class="smt-input text-[12px] leading-[20px]"
+                                                                placeholder="০,০০০০" value="" type="text"
+                                                                name="owner_name">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inner-card mb-6">
+                                <div class="inner-card-head">
+                                    <label class="text-[13px] inline-flex items-center gap-2">
+                                        অংশানুযায়ী জমির পরিমাণ
+                                    </label>
+                                </div>
+                                <div class="inner-card-body">
+                                    <div class="smt_case_status_filter_block relative w-full block">
+                                        <div class="block w-full">
+                                            <div class="card-table w-full block relative">
+                                                <div class="smt-applist-table relative overflow-x-auto">
+                                                    <div
+                                                        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4  w-full">
+                                                        <div class="input-group mb-4 block">
+                                                            <label class="text-[13px] mb-2 block">একক</label>
+                                                            <input class="smt-input text-[12px] leading-[20px]"
+                                                                placeholder="০,০০০০" value="" type="text"
+                                                                name="owner_name">
+                                                        </div>
+                                                        <div class="input-group mb-4 block">
+                                                            <label class="text-[13px] mb-2 block">শতক</label>
+                                                            <input class="smt-input text-[12px] leading-[20px]"
+                                                                placeholder="০,০০০০" value="" type="text"
+                                                                name="owner_name">
+                                                        </div>
+                                                        <div class="input-group mb-4 block">
+                                                            <label class="text-[13px] mb-2 block">অযুতাংশ</label>
+                                                            <input class="smt-input text-[12px] leading-[20px]"
+                                                                placeholder="০,০০০০" value="" type="text"
+                                                                name="owner_name">
+                                                        </div>
+                                                        <div class="input-group mb-4 block">
+                                                            <label class="text-[13px] mb-2 block">লক্ষাংশ</label>
+                                                            <input class="smt-input text-[12px] leading-[20px]"
+                                                                placeholder="০,০০০০" value="" type="text"
+                                                                name="owner_name">
+                                                        </div>
+                                                        <div class="col-span-1 md:col-span-2 lg:col-span-4 mb-4">
+                                                            <p class="text-[12px]">একক শতক অযুতাংশ লক্ষাংশ</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-[13px] font-bold mb-4">
+                        মালিক,অকিৃষি প্রজা বা ইজারাদারের তথ্য
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3  w-full">
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">মালিকের ধরন<span class="text-red-500">*</span></label>
+                            <select class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                <option>নির্বাচন করুন</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">মালিক, প্রজা বা ইজারাদারের নাম</label>
+                            <input class="smt-input text-[12px] leading-[20px]" placeholder="" value="" type="text"
+                                name="owner_name" />
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <div class="flex items-center justify-start space-x-4">
+                                <div class="flex items-center">
+                                    <input id="land_type_jomi" type="radio" name="land_type"
+                                        class="w-4 h-4 rounded-full bg-gray-100 border-[#0DB14B] focus:ring-green-500 focus:ring-0 focus:outline-none"
+                                        value="">
+                                    <label for="land_type_jomi"
+                                        class="w-full text-[13px] py-1 ml-2 font-medium text-gray-900 cursor-pointer">
+                                        পিতা</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="land_type_bari" type="radio" name="land_type"
+                                        class="w-4 h-4 rounded-full bg-gray-100 border-[#0DB14B] focus:ring-green-500 focus:ring-0 focus:outline-none0"
+                                        value="">
+                                    <label for="land_type_bari"
+                                        class="w-full text-[13px] py-1 ml-2 font-medium text-gray-900 cursor-pointer">স্বামী</label>
+                                </div>
+                            </div>
+
+                            <input class="smt-input text-[12px] leading-[20px]" placeholder="" value="" type="text"
+                                name="owner_name" />
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">মাতার নাম</label>
+                            <input class="smt-input text-[12px] leading-[20px]" placeholder="" value="" type="text"
+                                name="owner_name" />
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">অংশ</label>
+                            <input class="smt-input text-[12px] leading-[20px]" placeholder="" value="" type="text"
+                                name="owner_name" />
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">মোবাইল নম্বর</label>
+                            <input class="smt-input text-[12px] leading-[20px]" placeholder="" value="" type="text"
+                                name="owner_name" />
+                        </div>
+
+                        <div class="md:col-span-2 input-group mb-2 block">
+                            <label class="text-[13px] mb-2 block">ঠিকানা(সাং)<span class="text-red-500">*</span></label>
+                            <textarea class="smt-textarea text-[12px] leading-[20px] h-[60px] min-h-[40px]"
+                                name="khotiyan_corection_1" id="order_comments" cols="30" rows="2"
+                                placeholder="লিখুন"></textarea>
+                        </div>
+
+
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">পরিচয়ের ধরন<span class="text-red-500">*</span></label>
+                            <select class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                <option>নির্বাচন করুন</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">পরিচয়ের নম্বর</label>
+                            <input class="smt-input text-[12px] leading-[20px]" placeholder="" value="" type="text"
+                                name="owner_name" />
+                        </div>
+                        <div class="input-group mb-4 block">
+                            <label class="text-[13px] mb-2 block">জন্ম তারিখ</label>
+                            <input class="smt-input text-[12px] leading-[20px]" placeholder="" value="" type="text"
+                                name="owner_name" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div
+                    class="modalbox-footer bg-[#F4FFF8] px-4 py-4 sm:px-6 flex items-center justify-center gap-4 border-t border-[#0B9640]">
+                    <button class="h-[40px] btn-red-outline" @click="modal = false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 16 10" fill="none">
+                            <path
+                                d="M16.0009 5.66632V4.33299L1.70424 4.35365L4.58557 1.47099L3.64291 0.52832L0.585573 3.58565C0.210631 3.96071 0 4.46933 0 4.99965C0 5.52998 0.210631 6.0386 0.585573 6.41365L3.64291 9.47099L4.58557 8.52832L1.74424 5.68699L16.0009 5.66632Z"
+                                fill="#071638" />
+                        </svg>
+                        Close
+                    </button>
+
+                    <button
+                        class="h-[40px] flex items-center justify-center flex-nowrap py-[10px] px-4 text-[13px] leading-[18px] text-[#F2F2F2] bg-[#0DB14B] hover:bg-opacity-90 rounded-[5px] gap-[5px]"
+                        @click="modal = false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+                            <path
+                                d="M1.875 2.63542C1.875 2.30113 2.00779 1.98054 2.24417 1.74417C2.48054 1.50779 2.80113 1.375 3.13542 1.375H7.70225C7.89794 1.37495 8.09172 1.41346 8.27252 1.48833C8.45332 1.5632 8.61759 1.67296 8.75596 1.81133L9.68867 2.74404C9.96825 3.02363 10.125 3.40267 10.125 3.79775V8.36458C10.125 8.69887 9.99221 9.01946 9.75583 9.25583C9.51946 9.49221 9.19887 9.625 8.86458 9.625H3.13542C2.80113 9.625 2.48054 9.49221 2.24417 9.25583C2.00779 9.01946 1.875 8.69887 1.875 8.36458V2.63542ZM3.13542 2.0625C2.81917 2.0625 2.5625 2.31917 2.5625 2.63542V8.36458C2.5625 8.68083 2.81917 8.9375 3.13542 8.9375H3.25V6.53125C3.25 6.25775 3.35865 5.99544 3.55205 5.80205C3.74544 5.60865 4.00775 5.5 4.28125 5.5H7.71875C7.99226 5.5 8.25456 5.60865 8.44796 5.80205C8.64135 5.99544 8.75 6.25775 8.75 6.53125V8.9375H8.86458C9.18083 8.9375 9.4375 8.68083 9.4375 8.36458V3.79775C9.4375 3.58463 9.35317 3.38067 9.20238 3.23033L8.26967 2.29763C8.15126 2.17902 7.99867 2.10048 7.83333 2.07304V3.32292C7.83333 3.45834 7.80666 3.59244 7.75484 3.71756C7.70301 3.84268 7.62705 3.95636 7.53129 4.05212C7.43553 4.14788 7.32184 4.22384 7.19673 4.27567C7.07161 4.32749 6.93751 4.35417 6.80208 4.35417H4.73958C4.46608 4.35417 4.20378 4.24552 4.01038 4.05212C3.81698 3.85872 3.70833 3.59642 3.70833 3.32292V2.0625H3.13542ZM8.0625 8.9375V6.53125C8.0625 6.44008 8.02629 6.35265 7.96182 6.28818C7.89735 6.22372 7.80992 6.1875 7.71875 6.1875H4.28125C4.19008 6.1875 4.10265 6.22372 4.03818 6.28818C3.97372 6.35265 3.9375 6.44008 3.9375 6.53125V8.9375H8.0625ZM4.39583 2.0625V3.32292C4.39583 3.51267 4.54983 3.66667 4.73958 3.66667H6.80208C6.89325 3.66667 6.98069 3.63045 7.04515 3.56599C7.10962 3.50152 7.14583 3.41409 7.14583 3.32292V2.0625H4.39583Z"
+                                fill="white" />
+                        </svg>
+                        সংরক্ষণ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="fixed inset-0 z-50 flex flex-col items-center justify-end overflow-y-auto bg-gray-600 bg-opacity-50 sm:justify-start"
+        x-data="{modal:false}" x-show="modal"
+        x-on:modal-overlay.window="if ($event.detail.id == 'modalKhotiyanSongsodhon') modal=true"
+        x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-500"
+        x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+
+        <div class="w-full px-2 my-20 transition-all transform sm:max-w-2xl lg:max-w-[800px]" role="dialog"
+            aria-modal="true" aria-labelledby="modal-headline" x-show="modal"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 -translate-y-4 sm:translate-y-4"
+            x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4" x-on:click.away="modal=false">
+            <div class="bg-white rounded shadow-sm overflow-hidden">
+                <div class="modalbox-head relative bg-[#F4FFF8] px-4 py-6 sm:p-6 sm:pb-4 border-b border-[#0B9640]">
                     <h3 class="text-[18px] text-[#0B9640] text-center pr-4">আগত খতিয়ান</h3>
                     <span
                         class="absolute right-2 top-2 h-[30px] w-[30px] flex items-center justify-center rounded cursor-pointer"
@@ -1692,7 +2024,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="fixed inset-0 z-50 flex flex-col items-center justify-end overflow-y-auto bg-gray-600 bg-opacity-50 sm:justify-start"
         x-data="{modal:false}" x-show="modal"
