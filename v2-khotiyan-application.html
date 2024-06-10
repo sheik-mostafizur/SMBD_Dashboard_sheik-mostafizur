@@ -1637,7 +1637,7 @@
                         </div>
                     </div>
 
-                    <div
+                    <div x-data="{ lineInfos: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }], nextId: 5 }"
                         class="smt-dash-card w-full bg-white rounded-[6px] overflow-hidden border border-[#EBEDF0] mb-6">
                         <div
                             class="dash-card-head bg-[#EBEDF0] text-[#22304E] px-[15px] py-[10px] flex items-center justify-between flex-wrap gap-[10px]">
@@ -1645,7 +1645,7 @@
                                 <h3 class="text-[13px] leading-tight">দাগের তথ্য</h3>
                             </div>
                             <div class="btn-group inline-flex gap-[8px]">
-                                <button
+                                <button @click="lineInfos.push({ id: nextId++ })"
                                     class="h-[30px] flex items-center justify-center flex-nowrap py-[10px] px-4 text-[13px] leading-[16px] border border-[#17A2B7] text-[#ffffff] bg-[#17A2B7] hover:bg-[#17A2B7] rounded-[5px] gap-[5px]">
                                     <svg class="w-[18px] h-[18px]" xmlns="http://www.w3.org/2000/svg" width="11"
                                         height="12" viewBox="0 0 11 12" fill="none">
@@ -1658,65 +1658,199 @@
                             </div>
                         </div>
 
-                        <div class="dash-card-body p-[15px]">
-                            <div class="grid grid-cols-1 gap-4 md:grid-cols-3  w-full">
-                                <div class="input-group mb-4 block">
-                                    <label class="text-[13px] mb-2 block">দাগ নং</label>
-                                    <input class="smt-input text-[12px] leading-[20px]" placeholder="দাগ নং" value=""
-                                        type="text" name="owner_name">
+                        <!-- TEMPLATE Alpinejs -->
+                        <template x-for="(lineInfo, index) in lineInfos" :key="lineInfo.id">
+                            <div class="dash-card-body p-[15px] mb-4 relative">
+                                <template x-if="lineInfos.length > 1 && index !== 0">
+                                    <button
+                                        @click="lineInfos = lineInfos.filter(item => item.id !== lineInfo.id); console.log(lineInfos)"
+                                        class="cursor-pointer">
+                                        <span
+                                            class="absolute right-4 top-4 h-[30px] w-[30px] flex items-center justify-center rounded">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.6698 -0.000976562H14.3398C17.7298 -0.000976562 19.9998 2.37902 19.9998 5.91902V14.09C19.9998 17.62 17.7298 19.999 14.3398 19.999H5.6698C2.2798 19.999 -0.000198364 17.62 -0.000198364 14.09V5.91902C-0.000198364 2.37902 2.2798 -0.000976562 5.6698 -0.000976562ZM13.0098 12.999C13.3498 12.66 13.3498 12.11 13.0098 11.77L11.2298 9.99002L13.0098 8.20902C13.3498 7.87002 13.3498 7.31002 13.0098 6.97002C12.6698 6.62902 12.1198 6.62902 11.7698 6.97002L9.9998 8.74902L8.2198 6.97002C7.8698 6.62902 7.3198 6.62902 6.9798 6.97002C6.6398 7.31002 6.6398 7.87002 6.9798 8.20902L8.7598 9.99002L6.9798 11.76C6.6398 12.11 6.6398 12.66 6.9798 12.999C7.1498 13.169 7.3798 13.26 7.5998 13.26C7.8298 13.26 8.0498 13.169 8.2198 12.999L9.9998 11.23L11.7798 12.999C11.9498 13.18 12.1698 13.26 12.3898 13.26C12.6198 13.26 12.8398 13.169 13.0098 12.999Z"
+                                                    fill="#FF013E"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </template>
+                                <div class="grid grid-cols-1 gap-4 md:grid-cols-3  w-full">
+                                    <div class="input-group mb-4 block">
+                                        <label class="text-[13px] mb-2 block">দাগ নং</label>
+                                        <input class="smt-input text-[12px] leading-[20px]" placeholder="দাগ নং"
+                                            value="" type="text" name="owner_name">
+                                    </div>
+                                    <div class="input-group mb-4 block">
+                                        <label class="text-[13px] mb-2 block">জোত নম্বর</label>
+                                        <input class="smt-input text-[12px] leading-[20px]" placeholder="জোত নম্বর"
+                                            value="" type="text" name="owner_name">
+                                    </div>
+                                    <div class="input-group mb-4 block">
+                                        <label class="text-[13px] mb-2 block">ভূমি উন্নয়ন কর</label>
+                                        <input class="smt-input text-[12px] leading-[20px]" placeholder="ভূমি উন্নয়ন কর"
+                                            value="" type="text" name="owner_name">
+                                    </div>
                                 </div>
-                                <div class="input-group mb-4 block">
-                                    <label class="text-[13px] mb-2 block">জোত নম্বর</label>
-                                    <input class="smt-input text-[12px] leading-[20px]" placeholder="জোত নম্বর" value=""
-                                        type="text" name="owner_name">
-                                </div>
-                                <div class="input-group mb-4 block">
-                                    <label class="text-[13px] mb-2 block">ভূমি উন্নয়ন কর</label>
-                                    <input class="smt-input text-[12px] leading-[20px]" placeholder="ভূমি উন্নয়ন কর"
-                                        value="" type="text" name="owner_name">
-                                </div>
-                            </div>
 
-                            <div class="inner-card mb-6">
-                                <div class="inner-card-head">
-                                    <label class="text-[13px] inline-flex items-center gap-2">
-                                        জমির শ্রেণী
-                                    </label>
+                                <div class="inner-card mb-6">
+                                    <div class="inner-card-head">
+                                        <label class="text-[13px] inline-flex items-center gap-2">
+                                            জমির শ্রেণী
+                                        </label>
+                                    </div>
+                                    <div class="inner-card-body">
+                                        <div class="smt_case_status_filter_block relative w-full block">
+                                            <div class="block w-full">
+                                                <div class="card-table w-full block relative">
+                                                    <div class="smt-applist-table relative overflow-x-auto">
+                                                        <div class="grid grid-cols-1 gap-4 md:grid-cols-2  w-full">
+                                                            <div class="input-group mb-4 block">
+                                                                <label class="text-[13px] mb-2 block">রেকডীয় শ্রেণী
+                                                                    <span class="text-red-500">*</span></label>
+                                                                <select
+                                                                    class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                                                    <option>নির্বাচন করুন</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="input-group mb-4 block">
+                                                                <label class="text-[13px] mb-2 block">ব্যবহার ভিত্তিক
+                                                                    শ্রেণী
+                                                                    <span class="text-red-500">*</span></label>
+                                                                <select
+                                                                    class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
+                                                                    <option>নির্বাচন করুন</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="input-group mb-4 block">
+                                                                <label class="text-[13px] mb-2 block">দাগে মোট জমির
+                                                                    পরিমাণ</label>
+                                                                <input class="smt-input text-[12px] leading-[20px]"
+                                                                    placeholder="০,০০০০" value="" type="text"
+                                                                    name="owner_name">
+                                                            </div>
+                                                            <div class="input-group mb-4 block">
+                                                                <label class="text-[13px] mb-2 block">অংশ</label>
+                                                                <input class="smt-input text-[12px] leading-[20px]"
+                                                                    placeholder="০,০০০০" value="" type="text"
+                                                                    name="owner_name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="inner-card-body">
-                                    <div class="smt_case_status_filter_block relative w-full block">
-                                        <div class="block w-full">
-                                            <div class="card-table w-full block relative">
-                                                <div class="smt-applist-table relative overflow-x-auto">
-                                                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2  w-full">
-                                                        <div class="input-group mb-4 block">
-                                                            <label class="text-[13px] mb-2 block">রেকডীয় শ্রেণী <span
-                                                                    class="text-red-500">*</span></label>
-                                                            <select
-                                                                class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
-                                                                <option>নির্বাচন করুন</option>
-                                                            </select>
+
+                                <div class="inner-card mb-6">
+                                    <div class="inner-card-head">
+                                        <label class="text-[13px] inline-flex items-center gap-2">
+                                            অংশানুযায়ী জমির পরিমাণ
+                                        </label>
+                                    </div>
+                                    <div class="inner-card-body">
+                                        <div class="smt_case_status_filter_block relative w-full block">
+                                            <div class="block w-full">
+                                                <div class="card-table w-full block relative">
+                                                    <div class="smt-applist-table relative overflow-x-auto">
+                                                        <div
+                                                            class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4  w-full">
+                                                            <div class="input-group mb-4 block">
+                                                                <label class="text-[13px] mb-2 block">একক</label>
+                                                                <input class="smt-input text-[12px] leading-[20px]"
+                                                                    placeholder="০,০০০০" value="" type="text"
+                                                                    name="owner_name">
+                                                            </div>
+                                                            <div class="input-group mb-4 block">
+                                                                <label class="text-[13px] mb-2 block">শতক</label>
+                                                                <input class="smt-input text-[12px] leading-[20px]"
+                                                                    placeholder="০,০০০০" value="" type="text"
+                                                                    name="owner_name">
+                                                            </div>
+                                                            <div class="input-group mb-4 block">
+                                                                <label class="text-[13px] mb-2 block">অযুতাংশ</label>
+                                                                <input class="smt-input text-[12px] leading-[20px]"
+                                                                    placeholder="০,০০০০" value="" type="text"
+                                                                    name="owner_name">
+                                                            </div>
+                                                            <div class="input-group mb-4 block">
+                                                                <label class="text-[13px] mb-2 block">লক্ষাংশ</label>
+                                                                <input class="smt-input text-[12px] leading-[20px]"
+                                                                    placeholder="০,০০০০" value="" type="text"
+                                                                    name="owner_name">
+                                                            </div>
+                                                            <div class="col-span-1 md:col-span-2 lg:col-span-4 mb-4">
+                                                                <p class="text-[12px]">একক শতক অযুতাংশ লক্ষাংশ</p>
+                                                            </div>
                                                         </div>
-                                                        <div class="input-group mb-4 block">
-                                                            <label class="text-[13px] mb-2 block">ব্যবহার ভিত্তিক শ্রেণী
-                                                                <span class="text-red-500">*</span></label>
-                                                            <select
-                                                                class="smt-select block pr-6 text-[12px] leading-[20px] w-full">
-                                                                <option>নির্বাচন করুন</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="input-group mb-4 block">
-                                                            <label class="text-[13px] mb-2 block">দাগে মোট জমির
-                                                                পরিমাণ</label>
-                                                            <input class="smt-input text-[12px] leading-[20px]"
-                                                                placeholder="০,০০০০" value="" type="text"
-                                                                name="owner_name">
-                                                        </div>
-                                                        <div class="input-group mb-4 block">
-                                                            <label class="text-[13px] mb-2 block">অংশ</label>
-                                                            <input class="smt-input text-[12px] leading-[20px]"
-                                                                placeholder="০,০০০০" value="" type="text"
-                                                                name="owner_name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="text-[13px] font-bold mb-4">
+                                        হালনাগাদকৃত তথ্য
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3  w-full">
+                                        <div class="input-group mb-4 block">
+                                            <label class="text-[13px] mb-2 block">দাগ নং</label>
+                                            <input class="smt-input text-[12px] leading-[20px]" placeholder="দাগ নং"
+                                                value="" type="text" name="owner_name">
+                                        </div>
+                                        <div class="input-group mb-4 block">
+                                            <label class="text-[13px] mb-2 block">অংশ</label>
+                                            <input class="smt-input text-[12px] leading-[20px]" placeholder="অংশ"
+                                                value="" type="text" name="owner_name">
+                                        </div>
+                                    </div>
+                                    <div class="inner-card mb-6">
+                                        <div class="inner-card-head">
+                                            <label class="text-[13px] inline-flex items-center gap-2">
+                                                অংশানুযায়ী জমির পরিমাণ
+                                            </label>
+                                        </div>
+                                        <div class="inner-card-body">
+                                            <div class="smt_case_status_filter_block relative w-full block">
+                                                <div class="block w-full">
+                                                    <div class="card-table w-full block relative">
+                                                        <div class="smt-applist-table relative overflow-x-auto">
+                                                            <div
+                                                                class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4  w-full">
+                                                                <div class="input-group mb-4 block">
+                                                                    <label class="text-[13px] mb-2 block">একক</label>
+                                                                    <input class="smt-input text-[12px] leading-[20px]"
+                                                                        placeholder="০,০০০০" value="" type="text"
+                                                                        name="owner_name">
+                                                                </div>
+                                                                <div class="input-group mb-4 block">
+                                                                    <label class="text-[13px] mb-2 block">শতক</label>
+                                                                    <input class="smt-input text-[12px] leading-[20px]"
+                                                                        placeholder="০,০০০০" value="" type="text"
+                                                                        name="owner_name">
+                                                                </div>
+                                                                <div class="input-group mb-4 block">
+                                                                    <label
+                                                                        class="text-[13px] mb-2 block">অযুতাংশ</label>
+                                                                    <input class="smt-input text-[12px] leading-[20px]"
+                                                                        placeholder="০,০০০০" value="" type="text"
+                                                                        name="owner_name">
+                                                                </div>
+                                                                <div class="input-group mb-4 block">
+                                                                    <label
+                                                                        class="text-[13px] mb-2 block">লক্ষাংশ</label>
+                                                                    <input class="smt-input text-[12px] leading-[20px]"
+                                                                        placeholder="০,০০০০" value="" type="text"
+                                                                        name="owner_name">
+                                                                </div>
+                                                                <div
+                                                                    class="col-span-1 md:col-span-2 lg:col-span-4 mb-4">
+                                                                    <p class="text-[12px]">একক শতক অযুতাংশ লক্ষাংশ</p>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1725,124 +1859,15 @@
                                     </div>
                                 </div>
                             </div>
+                        </template>
 
-                            <div class="inner-card mb-6">
-                                <div class="inner-card-head">
-                                    <label class="text-[13px] inline-flex items-center gap-2">
-                                        অংশানুযায়ী জমির পরিমাণ
-                                    </label>
-                                </div>
-                                <div class="inner-card-body">
-                                    <div class="smt_case_status_filter_block relative w-full block">
-                                        <div class="block w-full">
-                                            <div class="card-table w-full block relative">
-                                                <div class="smt-applist-table relative overflow-x-auto">
-                                                    <div
-                                                        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4  w-full">
-                                                        <div class="input-group mb-4 block">
-                                                            <label class="text-[13px] mb-2 block">একক</label>
-                                                            <input class="smt-input text-[12px] leading-[20px]"
-                                                                placeholder="০,০০০০" value="" type="text"
-                                                                name="owner_name">
-                                                        </div>
-                                                        <div class="input-group mb-4 block">
-                                                            <label class="text-[13px] mb-2 block">শতক</label>
-                                                            <input class="smt-input text-[12px] leading-[20px]"
-                                                                placeholder="০,০০০০" value="" type="text"
-                                                                name="owner_name">
-                                                        </div>
-                                                        <div class="input-group mb-4 block">
-                                                            <label class="text-[13px] mb-2 block">অযুতাংশ</label>
-                                                            <input class="smt-input text-[12px] leading-[20px]"
-                                                                placeholder="০,০০০০" value="" type="text"
-                                                                name="owner_name">
-                                                        </div>
-                                                        <div class="input-group mb-4 block">
-                                                            <label class="text-[13px] mb-2 block">লক্ষাংশ</label>
-                                                            <input class="smt-input text-[12px] leading-[20px]"
-                                                                placeholder="০,০০০০" value="" type="text"
-                                                                name="owner_name">
-                                                        </div>
-                                                        <div class="col-span-1 md:col-span-2 lg:col-span-4 mb-4">
-                                                            <p class="text-[12px]">একক শতক অযুতাংশ লক্ষাংশ</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
-
-                    <div>
-                        <div class="text-[13px] font-bold mb-4">
-                            হালনাগাদকৃত তথ্য
-                        </div>
-                        <div class="grid grid-cols-1 gap-4 md:grid-cols-3  w-full">
-                            <div class="input-group mb-4 block">
-                                <label class="text-[13px] mb-2 block">দাগ নং</label>
-                                <input class="smt-input text-[12px] leading-[20px]" placeholder="দাগ নং" value=""
-                                    type="text" name="owner_name">
-                            </div>
-                            <div class="input-group mb-4 block">
-                                <label class="text-[13px] mb-2 block">অংশ</label>
-                                <input class="smt-input text-[12px] leading-[20px]" placeholder="অংশ" value=""
-                                    type="text" name="owner_name">
-                            </div>
-                        </div>
-                        <div class="inner-card mb-6">
-                            <div class="inner-card-head">
-                                <label class="text-[13px] inline-flex items-center gap-2">
-                                    অংশানুযায়ী জমির পরিমাণ
-                                </label>
-                            </div>
-                            <div class="inner-card-body">
-                                <div class="smt_case_status_filter_block relative w-full block">
-                                    <div class="block w-full">
-                                        <div class="card-table w-full block relative">
-                                            <div class="smt-applist-table relative overflow-x-auto">
-                                                <div
-                                                    class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4  w-full">
-                                                    <div class="input-group mb-4 block">
-                                                        <label class="text-[13px] mb-2 block">একক</label>
-                                                        <input class="smt-input text-[12px] leading-[20px]"
-                                                            placeholder="০,০০০০" value="" type="text" name="owner_name">
-                                                    </div>
-                                                    <div class="input-group mb-4 block">
-                                                        <label class="text-[13px] mb-2 block">শতক</label>
-                                                        <input class="smt-input text-[12px] leading-[20px]"
-                                                            placeholder="০,০০০০" value="" type="text" name="owner_name">
-                                                    </div>
-                                                    <div class="input-group mb-4 block">
-                                                        <label class="text-[13px] mb-2 block">অযুতাংশ</label>
-                                                        <input class="smt-input text-[12px] leading-[20px]"
-                                                            placeholder="০,০০০০" value="" type="text" name="owner_name">
-                                                    </div>
-                                                    <div class="input-group mb-4 block">
-                                                        <label class="text-[13px] mb-2 block">লক্ষাংশ</label>
-                                                        <input class="smt-input text-[12px] leading-[20px]"
-                                                            placeholder="০,০০০০" value="" type="text" name="owner_name">
-                                                    </div>
-                                                    <div class="col-span-1 md:col-span-2 lg:col-span-4 mb-4">
-                                                        <p class="text-[12px]">একক শতক অযুতাংশ লক্ষাংশ</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
 
                     <div class="text-[13px] font-bold mb-4">
                         মালিক,অকিৃষি প্রজা বা ইজারাদারের তথ্য
                     </div>
-
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-3  w-full">
                         <div class="input-group mb-4 block">
                             <label class="text-[13px] mb-2 block">মালিকের ধরন<span class="text-red-500">*</span></label>
