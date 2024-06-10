@@ -1637,7 +1637,7 @@
                         </div>
                     </div>
 
-                    <div x-data="{ lineInfos: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }], nextId: 5 }"
+                    <div x-data="{ lineInfos: [{ id: 1 }], nextId: 2 }"
                         class="smt-dash-card w-full bg-white rounded-[6px] overflow-hidden border border-[#EBEDF0] mb-6">
                         <div
                             class="dash-card-head bg-[#EBEDF0] text-[#22304E] px-[15px] py-[10px] flex items-center justify-between flex-wrap gap-[10px]">
@@ -1662,8 +1662,7 @@
                         <template x-for="(lineInfo, index) in lineInfos" :key="lineInfo.id">
                             <div class="dash-card-body p-[15px] mb-4 relative">
                                 <template x-if="lineInfos.length > 1 && index !== 0">
-                                    <button
-                                        @click="lineInfos = lineInfos.filter(item => item.id !== lineInfo.id); console.log(lineInfos)"
+                                    <button @click="lineInfos = lineInfos.filter(item => item.id !== lineInfo.id);"
                                         class="cursor-pointer">
                                         <span
                                             class="absolute right-4 top-4 h-[30px] w-[30px] flex items-center justify-center rounded">
