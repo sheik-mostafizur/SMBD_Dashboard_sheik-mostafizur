@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>v2-namjari-details-prostab-inline-table-preview</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <div style="background-color: #ffffff; padding: 1rem">
+      <div
+        x-data="{isShow:false, isShowComment:false}"
+        style="display: block; position: relative"
+      >
+        <div style="margin-bottom: 1rem">
+          <div
+            style="
+              backdrop-filter: blur(20px);
+              background-color: rgba(255, 255, 255, 0.8);
+              padding: 1rem;
+            "
+          >
+            <template x-if="isShow">
+              <button
+                @click="isShow=false"
+                style="color: #dc2626; position: absolute; right: 1rem"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </button>
+            </template>
+            <div style="min-width: 1600px; margin-bottom: 1rem">
+              <div
+                style="
+                  text-align: center;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+              >
+                <h1 style="font-weight: 700">
+                  নামজারি ও জমা-খারিজের জন্য দরখাস্ত বা রিপোর্ট ফরম
+                </h1>
+                <div style="font-size: 13px">
+                  <p>(১১০ নং নিয়মে দ্রষ্টব্য)</p>
+                  <p>
+                    উপজেলা ভূমি অফিসের রেজিস্টার্ডের কেস নং- ২,৮৩৬(IX-I)/২০২০-২১
+                  </p>
+                  <p>ইউনিয়ন ভূমি অফিসের রেজিস্টার কেস নং- ৮০(IX-I)/২০২৩-২৪</p>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  gap: 1rem;
+                  font-size: 13px;
+                  margin-top: 0.5rem;
+                "
+              >
+                <p><b>জেলা:</b> গোপালগঞ্জ</p>
+                <p><b>উপজেলা:</b> গোপালগঞ্জ সদর</p>
+                <p><b>ভূমি অফিস:</b> দুর্গাপুর ইউনিয়ন ভূমি অফিস</p>
+                <p><b>মৌজা:</b> কারারগাতি</p>
+                <p><b>জে.এল নৎ:</b> ১০২</p>
+              </div>
+            </div>
+
+            <table
+              style="
+                min-width: 1600px;
+                border-collapse: collapse;
+                border: 1px solid;
+                text-align: center;
+                margin-bottom: 1rem;
+                font-size: 13px;
+              "
+            >
+              <thead>
+                <tr>
+                  <th style="border: 1px solid #6b7280; padding: 0.25rem">১</th>
+                  <th
+                    colspan="7"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    ২
+                  </th>
+                  <th
+                    colspan="7"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    ৩
+                  </th>
+                  <th
+                    colspan="4"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    ৪
+                  </th>
+                </tr>
+                <tr>
+                  <td
+                    rowspan="4"
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      white-space: nowrap;
+                    "
+                  >
+                    আবেদনকারীর নাম ও পূর্ণ ঠিকানা
+                  </td>
+                  <td
+                    colspan="7"
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      white-space: nowrap;
+                    "
+                  >
+                    রেকর্ডীয় মালিকানা/ নামজারি জমা-খারিজ মালিকানা স্বত্বের
+                    বিবরণ
+                  </td>
+                  <td
+                    colspan="7"
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      white-space: nowrap;
+                    "
+                  >
+                    আবেদনকৃত ও প্রস্তাবিত জমির বিবরণ
+                  </td>
+                  <td
+                    colspan="4"
+                    rowspan="4"
+                    style="
+                      border: none !important;
+                      padding: 0.25rem;
+                      white-space: nowrap;
+                    "
+                  >
+                    মন্তব্য
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    জরিপের নাম
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    খতিয়ান নং
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    জোত/ হোল্ডিং নম্বর
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    প্রস্তাবিত ভূঃ উঃ কর (টাকা)
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    রেকর্ডীয় মালিকের নাম
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    খতিয়ানে মোট জমির পরিমাণ (একর)
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    সর্বশেষ নামজারি জমা-খারিজ খতিয়ান নং ও মালিকের নাম
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    আবেদনের দাগ নং
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    রেকর্ডীয় জমির শ্রেণী
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    বর্তমান জমির ব্যবহারের ধরণ
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    রেকর্ডীয় খতিয়ানে দাগে জমির পরিমাণ (একর)
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    খারিজ খতিয়ানে দাগে জমির পরিমাণ (একর)
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    আবেদনকৃত জমির পরিমাণ (একর)
+                  </td>
+                  <td
+                    rowspan="3"
+                    style="border: 1px solid #6b7280; padding: 0.25rem"
+                  >
+                    প্রস্তাবিত জমির পরিমাণ (একর)
+                  </td>
+                </tr>
+              </thead>
+              <tbody style="vertical-align: top">
+                <tr style="vertical-align: top">
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      text-align: left;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p><span>১)</span> মোঃ রমজান আলী</p>
+                      <p>পিতার নাম: মোঃ জিয়াদুল হক</p>
+                      <p>মাতার নাম: মোছাঃ রুবিনা বেগম</p>
+                      <p>জাতীয় পরিচয়পত্র: ১৫০৪৪৬৪৮৩৩</p>
+                      <p>ঠিকানা: ঠিকানা</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p>নামজারি</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p>২১৩৪২৩</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  ></td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <p>১০০</p>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      text-align: left;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div><!----><!----></div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p>১২.১২১২১২</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <div>
+                        <p><span>১)</span> দাতার নাম</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p>১২৩১</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p>(অকৃষি)নাল</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p>রাস্তা</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p>১২.১২১২১২</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p>০.০০০০০০</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p>১২.১২১২১২</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <div>
+                      <p>১২.১২১২১২</p>
+                    </div>
+                  </td>
+                  <td
+                    style="
+                      border: 1px solid #6b7280;
+                      text-align: left;
+                      padding: 0.25rem;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    <p>
+                      মহোদয়ের কার্যালয়ের N/A নং নামপত্তন জমাখারিজ মামলার আদেশের
+                      প্রেক্ষিতে আবেদনকৃত জমি সরেজমিন পরিদর্শন করা হয় এবং অত্র
+                      কার্যালয়ের রেজিস্টার I, II, VIII, XII পর্যালোচনায় বাদির
+                      প্রার্থীত জমির দাবী সঠিক আছে মর্মে দেখা যায়। আবেদনকারী
+                      অত্র জমি খারিজ খতিয়ান/রেকর্ডীয় মালিক জনাব দাতার নাম এর
+                      নিকট থেকে রেজিস্ট্রি দলিলমূলে প্রাপ্ত হন। রেজিস্টার
+                      পর্যালোচনায় দেখা যায়, আবেদনকৃত জমি সরকারি খাস, অর্পিত,
+                      পরিত্যক্ত, বিনিময়, ওয়াকফ, দেবোত্তর বা অন্য কোনভাবে সরকারি
+                      স্বার্থ সংশ্লিষ্ট নয়। অত্র জমিতে নামজারীতে আদালতের কোন
+                      সুনির্দিষ্ট নিষেধাজ্ঞা নেই বা রেন্ট সার্টিফিকেট মামলা নেই।
+                      ভূমি মন্ত্রণালয়ের আইন, বিধি ও পরিপত্রসমূহে বর্ণিত
+                      নির্দেশনা মোতাবেক আবেদনকারীর / আবেদনকারীগনের জন্য
+                      প্রস্তাবিত খসড়া খতিয়ান ও এর মন্তব্য কলামে প্রয়োজনীয় তথ্য
+                      প্রদান করা হয়েছে।
+                    </p>
+
+                    <p>
+                      এমতাবস্থায়, রেকর্ড হালকরণ ও সরকারি রাজস্ব আদায়ের স্বার্থে
+                      ৩ কলামে প্রস্তাবিত জমি সর্বশেষ খারিজ খতিয়ান/রেকর্ডীয় মালিক
+                      দাতার নাম, পিতা/ স্বামী, গ্রাম এর নাম ও অংশ হতে
+                      কর্তনপূর্বক আবেদনকারী মোঃ রমজান আলী, ঠিকানা এর নামে পৃথক
+                      খতিয়ান খুলে নামপত্তনসহ জমাখারিজের প্রস্তাব মঞ্জুরের
+                      সুপারিশ করা হলো।
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <template x-if="isShow">
+              <button
+                @click="isShow=false"
+                style="
+                  margin-left: auto;
+                  margin-right: auto;
+                  height: 36px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-wrap: nowrap;
+                  padding-top: 8px;
+                  padding-bottom: 8px;
+                  padding-left: 6px;
+                  padding-right: 6px;
+                  font-size: 13px;
+                  line-height: 18px;
+                  color: #071638;
+                  background-color: #ebecef;
+                  gap: 5px;
+                  border-radius: 5px;
+                "
+              >
+                Close
+              </button>
+            </template>
+          </div>
+          <div
+            style="
+              padding-top: 1.5rem;
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              gap: 1rem;
+            "
+          >
+            <div
+              style="
+                font-size: 0.75rem;
+                text-align: center;
+                min-width: 52px;
+                max-width: 200px;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                padding-bottom: 1.5rem;
+                position: relative;
+              "
+            >
+              <p><b>প্রস্তাবিত খতিয়ান</b></p>
+              <!-- '' -->
+
+              <div class="px-8">
+                <img
+                  src="./assets/images/signature.png"
+                  alt=""
+                  style="
+                    max-width: 10rem;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+
+                <p
+                  style="
+                    font-weight: 700;
+                    text-align: right;
+                    font-size: 0.875rem;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  ৩০/০১/২০২৪
+                </p>
+              </div>
+
+              <hr
+                style="
+                  border-color: #000000;
+                  margin-top: 0.5rem;
+                  margin-bottom: 0.5rem;
+                "
+              />
+              <div style="margin-bottom: 0.5rem">
+                <p>(হিমেল)</p>
+                <p>হিমেল ইউনিয়ন ভূমি সরকারি কর্মকর্তা</p>
+                <p>দুর্গাপুর ইউনিয়ন ভূমি অফিস</p>
+              </div>
+            </div>
+            <div
+              style="
+                font-size: 0.75rem;
+                text-align: center;
+                min-width: 52px;
+                max-width: 200px;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                padding-bottom: 1.5rem;
+                position: relative;
+              "
+            >
+              <p><b>প্রস্তাবিত খতিয়ান</b></p>
+              <!-- '' -->
+
+              <div class="px-8">
+                <img
+                  src="./assets/images/signature.png"
+                  alt=""
+                  style="
+                    max-width: 10rem;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+
+                <p
+                  style="
+                    font-weight: 700;
+                    text-align: right;
+                    font-size: 0.875rem;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  ৩০/০১/২০২৪
+                </p>
+              </div>
+
+              <hr
+                style="
+                  border-color: #000000;
+                  margin-top: 0.5rem;
+                  margin-bottom: 0.5rem;
+                "
+              />
+              <div style="margin-bottom: 0.5rem">
+                <p>(হিমেল)</p>
+                <p>হিমেল ইউনিয়ন ভূমি সরকারি কর্মকর্তা</p>
+                <p>দুর্গাপুর ইউনিয়ন ভূমি অফিস</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
