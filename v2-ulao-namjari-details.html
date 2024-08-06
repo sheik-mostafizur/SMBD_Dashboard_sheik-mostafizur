@@ -1070,7 +1070,7 @@
                                 </div>
                                 <div class="dash-card-body p-[15px]">
 
-                                    <div x-data="{ tab: 'tabNotice' }">
+                                    <div x-data="{ tab: 'tabProstabpotro' }">
                                         <div
                                             class="dash-tab-menu flex flex-wrap items-center justify-start gap-2 mt-2 mb-4">
                                             <button x-on:click="tab = 'tabFullApplication'"
@@ -4308,6 +4308,109 @@
                                                                                             x-on:click="$dispatch('modal-overlay',{id})">খসড়া
                                                                                             খতিয়ান সংশোধন</button>
                                                                                     </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="card-table w-full block relative mt-4">
+                                                                    <h3 class="text-[14px] my-2">ক. প্রস্তাবপত্র ও খসড়া খতিয়ান তৈরি করুন</h3>
+                                                                    <div
+                                                                        class="smt-applist-table relative overflow-x-auto">
+                                                                        <table
+                                                                            class="w-full text-[12px] xl:text-[13px] text-center text-[#545D69]">
+                                                                            <thead>
+                                                                                <tr
+                                                                                    class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
+                                                                                    <th
+                                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[50px]">
+                                                                                        <div
+                                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                                            নাম</div>
+                                                                                    </th>
+                                                                                    <th
+                                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                                        <div
+                                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                                            খতিয়ানের ধরম</div>
+                                                                                    </th>
+                                                                                    <th
+                                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle text-center">
+                                                                                        <div
+                                                                                            class="th-title flex items-center justify-center h-full w-full">
+                                                                                            দাগ নং</div>
+                                                                                    </th>
+                                                                                    <th
+                                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                                        <div
+                                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                                            দাগে জমির পরিমাণ</div>
+                                                                                    </th>
+                                                                                    <th
+                                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                                        <div
+                                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                                            মৌজায় বিদ্যমান খতিয়ান</div>
+                                                                                    </th>
+                                                                                    <th
+                                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                                        <div
+                                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                                            প্রস্তাবপত্র</div>
+                                                                                    </th>
+                                                                                    <th
+                                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                                        <div
+                                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                                            খসড়া খতিয়ান</div>
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr class="bg-[#FCFCFC]">
+                                                                                    <td rowspan="3" class="break-words">
+                                                                                        <div
+                                                                                            class="flex items-center justify-center gap-4">
+                                                                                            <span class="block">
+                                                                                                <img class="w-[30px] h-[30px] block rounded-full border border-[#A5ABB3]"
+                                                                                                    src="./assets/images/dashboard-option/user-sample-photo.jpg"
+                                                                                                    alt="User-Photo">
+                                                                                            </span>
+                                                                                            <span class="block">জুবায়ের
+                                                                                                নাজিম</span>
+                                                                                        </div>
+                                                                                    </td>
+
+                                                                                    <td>নামজারি</td>
+                                                                                    <td>80</td>
+                                                                                    <td>০.০৫</td>
+
+                                                                                    <td rowspan="3">১১৫০</td>
+                                                                                    <td rowspan="3">
+                                                                                        <button
+                                                                                        class="h-[30px] btn-green-outline mx-auto"
+                                                                                        x-data="{id:'modalProstabPotroSongsodhonEdit'}"
+                                                                                        x-on:click="$dispatch('modal-overlay',{id})">প্রস্তাবপত্র
+                                                                                        সংশোধন</button>
+                                                                                    </td>
+                                                                                    <td rowspan="3">
+                                                                                        <button
+                                                                                        class="h-[30px] btn-green-outline mx-auto"
+                                                                                        x-data="{id:'modalKhoshraKhotiyanSongsodhonEdit'}"
+                                                                                        x-on:click="$dispatch('modal-overlay',{id})">খসড়া
+                                                                                        খতিয়ান সংশোধন</button>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="bg-[#FCFCFC]">
+                                                                                    <td>নামজারি</td>
+                                                                                    <td>80</td>
+                                                                                    <td>০.০৫</td>
+                                                                                </tr>
+                                                                                <tr class="bg-[#FCFCFC]">
+                                                                                    <td>নামজারি</td>
+                                                                                    <td>80</td>
+                                                                                    <td>০.০৫</td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
