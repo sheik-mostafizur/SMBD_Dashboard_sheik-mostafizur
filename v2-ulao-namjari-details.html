@@ -1070,7 +1070,7 @@
                                 </div>
                                 <div class="dash-card-body p-[15px]">
 
-                                    <div x-data="{ tab: 'tabProstabpotro' }">
+                                    <div x-data="{ tab: 'tabAdeshnama' }">
                                         <div
                                             class="dash-tab-menu flex flex-wrap items-center justify-start gap-2 mt-2 mb-4">
                                             <button x-on:click="tab = 'tabFullApplication'"
@@ -2124,167 +2124,241 @@
                                                                 class="w-full text-[12px] xl:text-[13px] text-center text-[#545D69]">
                                                                 <thead>
                                                                     <tr
-                                                                        class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
-                                                                        <th
-                                                                            class="px-3 py-2 2xl:py-3 font-normal align-middle w-[60px]">
-                                                                            <div
-                                                                                class="th-title flex items-center justify-center text-center h-full w-full">
-                                                                                আদেশ</div>
-                                                                        </th>
-                                                                        <th
-                                                                            class="px-3 py-2 2xl:py-3 font-normal align-middle w-[100px]">
-                                                                            <div
-                                                                                class="th-title flex items-center justify-start text-left h-full w-full">
-                                                                                তারিখ</div>
-                                                                        </th>
-                                                                        <th
-                                                                            class="px-3 py-2 2xl:py-3 font-normal align-middle w-[100px]">
-                                                                            <div
-                                                                                class="th-title flex items-center justify-center text-center h-full w-full">
-                                                                                আদেশনামা ধরন</div>
-                                                                        </th>
-                                                                        <th
-                                                                            class="px-3 py-2 2xl:py-3 font-normal align-middle">
-                                                                            <div
-                                                                                class="th-title flex items-center justify-start text-left h-full w-full">
-                                                                                আদেশের বিবরণ</div>
-                                                                        </th>
-                                                                        <th
-                                                                            class="px-3 py-2 2xl:py-3 font-normal align-middle w-[100px]">
-                                                                            <div
-                                                                                class="th-title flex items-center justify-center text-center h-full w-full">
-                                                                                পদক্ষেপ</div>
-                                                                        </th>
-                                                                    </tr>
+                                                                    class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
+                                                                    <th rowspan="2"
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[60px]">
+                                                                        <div
+                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                            আদেশ</div>
+                                                                    </th>
+                                                                    <th rowspan="2"
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[100px]">
+                                                                        <div
+                                                                            class="th-title flex items-center justify-center text-left h-full w-full">
+                                                                            তারিখ</div>
+                                                                    </th>
+                                                                    <th rowspan="2"
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[100px]">
+                                                                        <div
+                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                            আদেশনামা ধরন</div>
+                                                                    </th>
+                                                                    <th rowspan="2"
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                        <div
+                                                                            class="th-title flex items-center justify-center text-left h-full w-full">
+                                                                            আদেশের বিবরণ</div>
+                                                                    </th>
+                                                                    <th colspan="2"
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[100px]">
+                                                                        <div
+                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                            আদেশের উপর গৃহীত কার্যকর ব্যবস্থা</div>
+                                                                    </th>
+                                                                    <th rowspan="2"
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                        <div
+                                                                            class="th-title flex items-center justify-center text-left h-full w-full">
+                                                                            পদক্ষেপ</div>
+                                                                    </th>
+                                                                </tr>
+                                                                    <tr
+                                                                    class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
+                                                                    <th rowspan="2"
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                                                        <div
+                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                            তারিখ</div>
+                                                                    </th>
+                                                                    <th rowspan="2"
+                                                                        class="px-3 py-2 2xl:py-3 font-normal align-middle w-[100px]">
+                                                                        <div
+                                                                            class="th-title flex items-center justify-center text-center h-full w-full">
+                                                                            বিবরণ</div>
+                                                                    </th>
+                                                                </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr class="bg-[#FCFCFC]">
-                                                                        <td>১</td>
-                                                                        <td>
-                                                                            <div class="text-center">১৩/০৬/২৩</div>
-                                                                        </td>
-                                                                        <td class="break-words">
-                                                                            <div class="text-center">(আবেদনপত্র গ্রহণ ও
-                                                                                তদন্তের জন্য প্রেরণ)</div>
-                                                                        </td>
-                                                                        <td class="break-words">
-                                                                            <p class="text-left">ইউনিয়ন ভুমি সহকারী
-                                                                                কর্মকর্তা পাইকেরডাঙ্গা ইউনিয়ন ভূমি অফিস
-                                                                                ইউনিয়ন / পৌর ভূমি অফিস তদন্তপূর্বক
-                                                                                প্রতিবেদন দাখিল করেছেন ।
-                                                                                তিনি প্রতিবেদনে উল্লেখ করেছেন যে,
-                                                                                আবেদনকারী / আবেদনকারীগন আবেদনকৃত জমিতে
-                                                                                সরেজমিনে দখলে আছেন । রেকর্ড পত্র
-                                                                                পর্যালোচনায়
-                                                                                তার/তাদের জমির প্রাপ্যতা সঠিক আছে ।
-                                                                                দেওয়ানী মামলা রেজিস্টার পর্যালোচনায়
-                                                                                আলোচ্য জমির বিষয়ে কোন দেওয়ানী মামলা বা
-                                                                                আদালতের
-                                                                                নিষেধাজ্ঞা দেখা যায় না । অত্র জমি
-                                                                                অর্পিত, পরিত্যক্ত, খাস বা সরকারি কোন
-                                                                                স্বার্থযুক্ত নয় ও জমির উল্লিখিত শ্রেণি
-                                                                                সঠিক আছে
-                                                                                এবং আবেদনকারীর/ আবেদনকারীগনের নামে
-                                                                                নামজারি-জমাভাগের সুপারিশ করেছেন । <br>
-                                                                                দেখলাম । শুনানির জন্য উভয় পক্ষকে নোটিশ
-                                                                                দেয়া হোক ।
-                                                                                এছাড়া আবেদনকৃত জমিতে বাদীর দাবীর
-                                                                                যথার্থতা সঠিক আছে কিনা; সরকারি খাস,
-                                                                                অর্পিত, পরিত্যক্ত, সংস্থার, ওয়াকফ,
-                                                                                দেবোত্তর বা অন্য
-                                                                                কোনভাবে সরকারি স্বার্থ সংশ্লিষ্ট কিনা
-                                                                                এবং দেওয়ানী মোকদ্দমা, সায়রাত
-                                                                                রেজিস্টারভুক্ত বা অন্য কোন মামলাভুক্ত
-                                                                                কিনা ইত্যাদি
-                                                                                তথ্যসহ অফিসের প্রয়োজনীয় রেজিস্টার ও
-                                                                                নথিপত্র যাচাই করে ধার্য তারিখের পূর্বেই
-                                                                                কানুনগো/সার্ভেয়র, নামজারি সহকারী
-                                                                                প্রতিবেদন
-                                                                                দাখিল করবেন ।
-                                                                                শুনানির জন্য পরবর্তী ধার্য তারিখ -
-                                                                                ১৩/১২/২০১৯ খ্রি:।</p>
-                                                                        </td>
+                                                                    
+            <tr class="bg-[#FFFFFF]">
+                <td>২</td>
+                <td>
+                    <div class="text-center">১৩/০৬/২৩</div>
+                </td>
+                <td class="break-words">
+                    <div class="text-center">শুনানীর প্রত্যায়ন / ঘোষনা</div>
+                </td>
 
-                                                                        <td>
-                                                                            <button x-data="{id:'modalAdeshnamPrint'}"
-                                                                                x-on:click="$dispatch('modal-overlay',{id})"
-                                                                                class="h-[30px] btn-green-outline mx-auto">
-                                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                    width="16" height="15"
-                                                                                    viewBox="0 0 14 13" fill="none">
-                                                                                    <g
-                                                                                        clip-path="url(#clip0_10241_137340)">
-                                                                                        <path
-                                                                                            d="M10.7917 3.25V2.16667C10.7917 1.59203 10.5634 1.04093 10.1571 0.634602C9.75074 0.228273 9.19964 0 8.625 0L5.375 0C4.80036 0 4.24926 0.228273 3.84294 0.634602C3.43661 1.04093 3.20833 1.59203 3.20833 2.16667V3.25C2.4903 3.25086 1.80193 3.53648 1.2942 4.0442C0.786478 4.55193 0.50086 5.2403 0.5 5.95833L0.5 8.66667C0.50086 9.3847 0.786478 10.0731 1.2942 10.5808C1.80193 11.0885 2.4903 11.3741 3.20833 11.375C3.20833 11.806 3.37954 12.2193 3.68429 12.5241C3.98903 12.8288 4.40236 13 4.83333 13H9.16667C9.59764 13 10.011 12.8288 10.3157 12.5241C10.6205 12.2193 10.7917 11.806 10.7917 11.375C11.5097 11.3741 12.1981 11.0885 12.7058 10.5808C13.2135 10.0731 13.4991 9.3847 13.5 8.66667V5.95833C13.4991 5.2403 13.2135 4.55193 12.7058 4.0442C12.1981 3.53648 11.5097 3.25086 10.7917 3.25ZM4.29167 2.16667C4.29167 1.87935 4.4058 1.6038 4.60897 1.40063C4.81213 1.19747 5.08768 1.08333 5.375 1.08333H8.625C8.91232 1.08333 9.18787 1.19747 9.39103 1.40063C9.5942 1.6038 9.70833 1.87935 9.70833 2.16667V3.25H4.29167V2.16667ZM9.70833 11.375C9.70833 11.5187 9.65127 11.6564 9.54968 11.758C9.4481 11.8596 9.31033 11.9167 9.16667 11.9167H4.83333C4.68967 11.9167 4.5519 11.8596 4.45032 11.758C4.34874 11.6564 4.29167 11.5187 4.29167 11.375V9.20833C4.29167 9.06468 4.34874 8.9269 4.45032 8.82532C4.5519 8.72374 4.68967 8.66667 4.83333 8.66667H9.16667C9.31033 8.66667 9.4481 8.72374 9.54968 8.82532C9.65127 8.9269 9.70833 9.06468 9.70833 9.20833V11.375ZM12.4167 8.66667C12.4167 9.09764 12.2455 9.51097 11.9407 9.81572C11.636 10.1205 11.2226 10.2917 10.7917 10.2917V9.20833C10.7917 8.77736 10.6205 8.36403 10.3157 8.05929C10.011 7.75454 9.59764 7.58333 9.16667 7.58333H4.83333C4.40236 7.58333 3.98903 7.75454 3.68429 8.05929C3.37954 8.36403 3.20833 8.77736 3.20833 9.20833V10.2917C2.77736 10.2917 2.36403 10.1205 2.05929 9.81572C1.75454 9.51097 1.58333 9.09764 1.58333 8.66667V5.95833C1.58333 5.52736 1.75454 5.11403 2.05929 4.80929C2.36403 4.50454 2.77736 4.33333 3.20833 4.33333H10.7917C11.2226 4.33333 11.636 4.50454 11.9407 4.80929C12.2455 5.11403 12.4167 5.52736 12.4167 5.95833V8.66667Z"
-                                                                                            fill="#00684D" />
-                                                                                        <path
-                                                                                            d="M10.25 5.41699H9.16667C9.02301 5.41699 8.88523 5.47406 8.78365 5.57564C8.68207 5.67722 8.625 5.815 8.625 5.95866C8.625 6.10232 8.68207 6.24009 8.78365 6.34167C8.88523 6.44326 9.02301 6.50032 9.16667 6.50032H10.25C10.3937 6.50032 10.5314 6.44326 10.633 6.34167C10.7346 6.24009 10.7917 6.10232 10.7917 5.95866C10.7917 5.815 10.7346 5.67722 10.633 5.57564C10.5314 5.47406 10.3937 5.41699 10.25 5.41699Z"
-                                                                                            fill="#00684D" />
-                                                                                    </g>
-                                                                                    <defs>
-                                                                                        <clipPath
-                                                                                            id="clip0_10241_137340">
-                                                                                            <rect width="13" height="13"
-                                                                                                fill="white"
-                                                                                                transform="translate(0.5)" />
-                                                                                        </clipPath>
-                                                                                    </defs>
-                                                                                </svg>
-                                                                                প্রিন্ট
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr class="bg-[#FFFFFF]">
-                                                                        <td>২</td>
-                                                                        <td>
-                                                                            <div class="text-center">১৩/০৬/২৩</div>
-                                                                        </td>
-                                                                        <td class="break-words">
-                                                                            <div class="text-center">অসম্পূর্নআবেদন
-                                                                                (আবেদনকারীকে তথ্য/ নথি জমার আদেশ)</div>
-                                                                        </td>
-                                                                        <td class="break-words">
-                                                                            <p class="text-left">নামজারি জমাভাগ মামলা নং
-                                                                                - ৭(IX-I)/২০২২-২৩ এর ০৬/০১/২২ তারিখের
-                                                                                আদেশের সদয় নির্দেশ মোতাবেক প্রতিবেদন
-                                                                                দাখিল ।</p>
-                                                                        </td>
+                <td class="break-words spacey-4">
 
-                                                                        <td>
-                                                                            <button x-data="{id:'modalAdeshnamPrint'}"
-                                                                                x-on:click="$dispatch('modal-overlay',{id})"
-                                                                                class="h-[30px] btn-green-outline mx-auto">
-                                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                    width="16" height="15"
-                                                                                    viewBox="0 0 14 13" fill="none">
-                                                                                    <g
-                                                                                        clip-path="url(#clip0_10241_137340)">
-                                                                                        <path
-                                                                                            d="M10.7917 3.25V2.16667C10.7917 1.59203 10.5634 1.04093 10.1571 0.634602C9.75074 0.228273 9.19964 0 8.625 0L5.375 0C4.80036 0 4.24926 0.228273 3.84294 0.634602C3.43661 1.04093 3.20833 1.59203 3.20833 2.16667V3.25C2.4903 3.25086 1.80193 3.53648 1.2942 4.0442C0.786478 4.55193 0.50086 5.2403 0.5 5.95833L0.5 8.66667C0.50086 9.3847 0.786478 10.0731 1.2942 10.5808C1.80193 11.0885 2.4903 11.3741 3.20833 11.375C3.20833 11.806 3.37954 12.2193 3.68429 12.5241C3.98903 12.8288 4.40236 13 4.83333 13H9.16667C9.59764 13 10.011 12.8288 10.3157 12.5241C10.6205 12.2193 10.7917 11.806 10.7917 11.375C11.5097 11.3741 12.1981 11.0885 12.7058 10.5808C13.2135 10.0731 13.4991 9.3847 13.5 8.66667V5.95833C13.4991 5.2403 13.2135 4.55193 12.7058 4.0442C12.1981 3.53648 11.5097 3.25086 10.7917 3.25ZM4.29167 2.16667C4.29167 1.87935 4.4058 1.6038 4.60897 1.40063C4.81213 1.19747 5.08768 1.08333 5.375 1.08333H8.625C8.91232 1.08333 9.18787 1.19747 9.39103 1.40063C9.5942 1.6038 9.70833 1.87935 9.70833 2.16667V3.25H4.29167V2.16667ZM9.70833 11.375C9.70833 11.5187 9.65127 11.6564 9.54968 11.758C9.4481 11.8596 9.31033 11.9167 9.16667 11.9167H4.83333C4.68967 11.9167 4.5519 11.8596 4.45032 11.758C4.34874 11.6564 4.29167 11.5187 4.29167 11.375V9.20833C4.29167 9.06468 4.34874 8.9269 4.45032 8.82532C4.5519 8.72374 4.68967 8.66667 4.83333 8.66667H9.16667C9.31033 8.66667 9.4481 8.72374 9.54968 8.82532C9.65127 8.9269 9.70833 9.06468 9.70833 9.20833V11.375ZM12.4167 8.66667C12.4167 9.09764 12.2455 9.51097 11.9407 9.81572C11.636 10.1205 11.2226 10.2917 10.7917 10.2917V9.20833C10.7917 8.77736 10.6205 8.36403 10.3157 8.05929C10.011 7.75454 9.59764 7.58333 9.16667 7.58333H4.83333C4.40236 7.58333 3.98903 7.75454 3.68429 8.05929C3.37954 8.36403 3.20833 8.77736 3.20833 9.20833V10.2917C2.77736 10.2917 2.36403 10.1205 2.05929 9.81572C1.75454 9.51097 1.58333 9.09764 1.58333 8.66667V5.95833C1.58333 5.52736 1.75454 5.11403 2.05929 4.80929C2.36403 4.50454 2.77736 4.33333 3.20833 4.33333H10.7917C11.2226 4.33333 11.636 4.50454 11.9407 4.80929C12.2455 5.11403 12.4167 5.52736 12.4167 5.95833V8.66667Z"
-                                                                                            fill="#00684D" />
-                                                                                        <path
-                                                                                            d="M10.25 5.41699H9.16667C9.02301 5.41699 8.88523 5.47406 8.78365 5.57564C8.68207 5.67722 8.625 5.815 8.625 5.95866C8.625 6.10232 8.68207 6.24009 8.78365 6.34167C8.88523 6.44326 9.02301 6.50032 9.16667 6.50032H10.25C10.3937 6.50032 10.5314 6.44326 10.633 6.34167C10.7346 6.24009 10.7917 6.10232 10.7917 5.95866C10.7917 5.815 10.7346 5.67722 10.633 5.57564C10.5314 5.47406 10.3937 5.41699 10.25 5.41699Z"
-                                                                                            fill="#00684D" />
-                                                                                    </g>
-                                                                                    <defs>
-                                                                                        <clipPath
-                                                                                            id="clip0_10241_137340">
-                                                                                            <rect width="13" height="13"
-                                                                                                fill="white"
-                                                                                                transform="translate(0.5)" />
-                                                                                        </clipPath>
-                                                                                    </defs>
-                                                                                </svg>
-                                                                                প্রিন্ট
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
+                    <div class="text-left">
+                        <!-- <p>বাদী/ আবেদনকারী/ প্রতিনিধির উপস্থিত?</p>
+                        <p>কোন আপত্তি পাওয়া গেছে কি না? </p> -->
+                        <p>উথাপিত আপত্তি গ্রহণ যোগ্য কি না? </p>
+                        <div class="flex items-center justify-start space-x-4">
+                            <div class="flex items-center">
+                                <input id="order_biboron__badi_abadi_yes" type="radio" name="land_type" class="w-4 h-4 rounded-full bg-gray-100 border-[#0DB14B] focus:ring-green-500 focus:ring-0 focus:outline-none" value="">
+                                <label for="order_biboron__badi_abadi_yes" class="w-full text-[13px] py-1 ml-2 font-medium text-gray-900 cursor-pointer">
+                                    হ্যাঁ</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="order_biboron__badi_abadi_no" type="radio" name="land_type" class="w-4 h-4 rounded-full bg-gray-100 border-[#0DB14B] focus:ring-green-500 focus:ring-0 focus:outline-none0" value="">
+                                <label for="order_biboron__badi_abadi_no" class="w-full text-[13px] py-1 ml-2 font-medium text-gray-900 cursor-pointer">না</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <div class="input-group mt-4 block w-full">
+                            <label class="text-[13px] mb-4 block">কারণ গুলো নির্বাচন করুণ</label>
+                            <div class="w-full mb-2 inline-flex gap-4 flex-nowrap items-center justify-start">
+                                <input class="rounded-md w-[20px] h-[20px]" type="checkbox" name="inquery_ulao" id="inquery_ulao">
+                                <label for="inquery_ulao" class="text-[13px] block">কারন গুলো</label>
+                            </div>
+                            <div class="flex items-center justify-start gap-4 mb-2">
+                                <div class="mb-2 inline-flex gap-4 flex-nowrap items-center justify-start border py-2 px-4 rounded">
+                                    <input class="rounded-md w-[16px] h-[16px]" type="checkbox" name="inquery_ulao" id="inquery_ulao">
+                                    <label for="inquery_ulao" class="text-[13px] block">কারন গুলো</label>
+                                </div>
+                                <div class="mb-2 inline-flex gap-4 flex-nowrap items-center justify-start border py-2 px-4 rounded">
+                                    <input class="rounded-md w-[16px] h-[16px]" type="checkbox" name="inquery_ulao" id="inquery_ulao">
+                                    <label for="inquery_ulao" class="text-[13px] block">কারন গুলো</label>
+                                </div>
+                            </div>
+                            <div class="w-full mb-2 inline-flex gap-4 flex-nowrap items-center justify-start">
+                                <input class="rounded-md w-[20px] h-[20px]" type="checkbox" name="inquery_ulao_kanugo" id="inquery_ulao_kanugo">
+                                <label for="inquery_ulao_kanugo" class="text-[13px] block">কারন গুলো</label>
+                            </div>
+                            <div class="w-full mb-2 inline-flex gap-4 flex-nowrap items-center justify-start">
+                                <input class="rounded-md w-[20px] h-[20px]" type="checkbox" name="inquery_kanugo" id="inquery_kanugo">
+                                <label for="inquery_kanugo" class="text-[13px] block">কারন গুলো</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+
+                <td></td>
+                <td class="break-words"></td>
+                <td>
+                    <a href="#" class="h-[40px] flex items-center justify-center flex-nowrap py-[10px] px-[15px] text-[13px] leading-[18px] text-[#ffffff] bg-[#00684D] hover:bg-opacity-90 rounded-[5px] gap-[10px]" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+                            <g clip-path="url(#clip0_8129_4144)">
+                                <path d="M9.2085 8.08335C9.2085 8.22701 9.15143 8.36478 9.04985 8.46636C8.94827 8.56795 8.81049 8.62501 8.66683 8.62501H4.3335C4.18984 8.62501 4.05206 8.56795 3.95048 8.46636C3.8489 8.36478 3.79183 8.22701 3.79183 8.08335C3.79183 7.93969 3.8489 7.80191 3.95048 7.70033C4.05206 7.59875 4.18984 7.54168 4.3335 7.54168H8.66683C8.81049 7.54168 8.94827 7.59875 9.04985 7.70033C9.15143 7.80191 9.2085 7.93969 9.2085 8.08335ZM7.04183 9.70835H4.3335C4.18984 9.70835 4.05206 9.76542 3.95048 9.867C3.8489 9.96858 3.79183 10.1064 3.79183 10.25C3.79183 10.3937 3.8489 10.5314 3.95048 10.633C4.05206 10.7346 4.18984 10.7917 4.3335 10.7917H7.04183C7.18549 10.7917 7.32326 10.7346 7.42485 10.633C7.52643 10.5314 7.5835 10.3937 7.5835 10.25C7.5835 10.1064 7.52643 9.96858 7.42485 9.867C7.32326 9.76542 7.18549 9.70835 7.04183 9.70835ZM11.9168 6.17939V10.7917C11.916 11.5097 11.6304 12.1981 11.1226 12.7058C10.6149 13.2135 9.92653 13.4992 9.2085 13.5H3.79183C3.0738 13.4992 2.38542 13.2135 1.8777 12.7058C1.36997 12.1981 1.08436 11.5097 1.0835 10.7917V3.20835C1.08436 2.49032 1.36997 1.80194 1.8777 1.29422C2.38542 0.78649 3.0738 0.500873 3.79183 0.500012H6.23746C6.73558 0.49873 7.22902 0.596206 7.68924 0.786803C8.14947 0.9774 8.56734 1.25734 8.91871 1.61043L10.8059 3.49868C11.1592 3.84981 11.4393 4.26755 11.63 4.72771C11.8207 5.18786 11.9182 5.68128 11.9168 6.17939ZM8.15279 2.37635C7.98232 2.21123 7.79092 2.06918 7.5835 1.95385V4.29168C7.5835 4.43534 7.64057 4.57311 7.74215 4.6747C7.84373 4.77628 7.9815 4.83335 8.12516 4.83335H10.463C10.3476 4.62599 10.2054 4.43476 10.04 4.2646L8.15279 2.37635ZM10.8335 6.17939C10.8335 6.09001 10.8162 6.00443 10.808 5.91668H8.12516C7.69419 5.91668 7.28086 5.74548 6.97611 5.44073C6.67137 5.13598 6.50016 4.72266 6.50016 4.29168V1.6088C6.41241 1.60068 6.32629 1.58335 6.23746 1.58335H3.79183C3.36085 1.58335 2.94753 1.75455 2.64278 2.0593C2.33803 2.36404 2.16683 2.77737 2.16683 3.20835V10.7917C2.16683 11.2227 2.33803 11.636 2.64278 11.9407C2.94753 12.2455 3.36085 12.4167 3.79183 12.4167H9.2085C9.63947 12.4167 10.0528 12.2455 10.3575 11.9407C10.6623 11.636 10.8335 11.2227 10.8335 10.7917V6.17939Z" fill="#F5F6FA"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_8129_4144">
+                                    <rect width="13" height="13" fill="white" transform="translate(0 0.5)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        আদেশ প্রদান করুন
+                    </a> </td>
+            </tr>
+
+            <tr class="bg-[#FCFCFC]">
+                <td>১</td>
+                <td>
+                    <div class="text-center">১৩/০৬/২৩</div>
+                </td>
+                <td class="break-words">
+                    <div class="text-center">(আবেদনপত্র গ্রহণ ও
+                        তদন্তের জন্য প্রেরণ)</div>
+                </td>
+                <td class="break-words space-y-4">
+
+                   <div class="text-left">
+                        <p>জনাব:- নুভানা নাঈমা হক</p>
+                        <p>ঠিকানাঃ- সিলেট</p>
+                        <p>উপজেলাঃ- বালাগঞ্জ জেলাঃ- সিলেট</p>
+                        <p>পরিচিতি নম্বর- জাতীয় পরিচয়পত্র নম্বর  : ১৯১৮৫৬১৪২২</p>
+                        <p>এর নিকট হতে (নুভানা নাঈমা হক) এর পক্ষে নিম্ন তফসিল ভুক্ত জমির জন্য মিউটেশনের আবেদন নম্বর (২৮৯৮০৬৭) পাওয়া গেছে। আবেদন গ্রহণ করা হলো এবং সে প্রেক্ষিতে মিউটেশন মামলা নম্বর (----------) রুজু করা হলো</p>
+                   </div>
+                   <div class="text-left">
+                    <p>জমির তফসিল</p>
+                    <p>মৌজা: সাদেকপুর</p>
+                   </div>
+
+                        <table class="w-full text-[12px] xl:text-[13px] text-left text-[#545D69]">
+                            <thead>
+                                <tr class="bg-[#F0F0F0] font-normal align-baseline text-[#000000]">
+                                    <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                        <div class="th-title flex items-center justify-center text-center h-full w-full">
+                                            জরিপের নাম
+                                        </div>
+                                    </th>
+                                    <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                        <div class="th-title flex items-center justify-center text-center h-full w-full">
+                                            খতিয়ান নং
+                                        </div>
+                                    </th>
+                                    <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                        <div class="th-title flex items-center justify-center text-center h-full w-full">
+                                            দাগ নং
+                                        </div>
+                                    </th>
+                                    <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                        <div class="th-title flex items-center justify-center text-center h-full w-full">
+                                            খতিয়ানে আবেদনকৃত মোট<br> জমির
+                                            পরিমাণ
+                                            (একর)
+                                        </div>
+                                    </th>
+                                    <th class="px-3 py-2 2xl:py-3 font-normal align-middle">
+                                        <div class="th-title flex items-center justify-center text-center h-full w-full">
+                                            জমির পরিমান (একর)
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-[#ffffff]">
+                                    <td>নামজারি</td>
+                                    <td>১২০</td>
+                                    <td>০.০৪০০০</td>
+                                    <td>৩০০</td>
+                                    <td>০.০৪০০০ একর</td>
+                                </tr>
+                                <tr class="bg-[#FCFCFC]">
+                                    <td>আর এস</td>
+                                    <td>১২০</td>
+                                    <td>০.০৪০০০</td>
+                                    <td>৩০০</td>
+                                    <td>০.০৪০০০ একর</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="text-left">
+                         <p>মোট জমির পরিমাণ: ০ একর ৪০ শতক ০০ অযুতাংশ ০০ লক্ষাংশ</p>
+                         <p>কথায়: ০.৩০০০ এক</p>
+                        </div>
+
+                        <div class="text-left">
+                            <p>আবেদনের জমির বিষয়ে সরেজমিনে তদন্ত করে সর্বোচ্চ ৭ দিনের মধ্যে ইউনিয়ন ভূমি সহকারী/ ইউনিয়ন ভূমি উপ সহকারী কর্মকর্তা, সুলতানপুর ইউনিয়ন ভূমি অফিস ইউনিয়ন/পৌর ভূমি অফিস বিদ্যমান আইন ও বিধি বিধান অনুযায়ী মতামতসহ সুস্পষ্ট প্রস্তাব/প্রতিবেদন দিবেন । তদন্ত প্রতিবেদনের জন্য আগামী ধার্য তারিখ ২ অক্টোবর ২০২৪ খ্রিঃ ।</p>
+                        </div>
+
+                        <div class="text-right">
+                            <img class="ml-auto" src="./assets//images/signature.png" width="75" alt="">
+                            <p>২৪/৮/২২ (asdf)</p>
+                            <p>সহকারী কমিশনার (ভূমি)</p>
+                            <p>উপজেলা ভূমি অফিস</p>
+                            <p>গোপালগঞ্জ সদর, গোপালগঞ্জ</p>
+                        </div>
+                </td>
+
+                <td>
+                    <div class="text-center">১৩/০৬/২৩</div>
+                </td>
+                <td class="break-words">
+                    <div class="text-center">আবেদনকারীর অনুকূলে প্রতিবেদনে চূড়ান্ত প্রস্তাবিত জমির মিউটেশন মঞ্জুর করা যেতে পারে।</div>
+                </td>
+                <td>
+                </td>
+            </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
 
                                             <div x-show="tab === 'tabNotice'" class="tab-content-block">
                                                 <div class="tab-main-content block relative">
